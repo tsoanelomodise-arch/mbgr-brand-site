@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { MapPin, Phone, FileText, Mail, Globe } from "lucide-react";
+import { MapPin, Phone, FileText, Mail, Globe, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
+import { ContactForm } from "./ContactForm";
 
 export const Contact = () => {
   const contactInfo = [
@@ -49,34 +50,99 @@ export const Contact = () => {
             </p>
           </div>
 
-          <Card className="p-8 md:p-12 bg-card border-border">
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => {
-                const Icon = info.icon;
-                const content = (
-                  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-secondary/50 transition-colors">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="h-6 w-6 text-primary" />
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Contact Information */}
+            <Card className="p-8 bg-card border-border h-fit">
+              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <div className="space-y-4">
+                {contactInfo.map((info, index) => {
+                  const Icon = info.icon;
+                  const content = (
+                    <div className="flex items-start gap-4 p-3 rounded-lg hover:bg-secondary/50 transition-colors">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm text-muted-foreground mb-1">{info.label}</p>
+                        <p className="text-foreground font-medium text-sm">{info.value}</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-sm text-muted-foreground mb-1">{info.label}</p>
-                      <p className="text-foreground font-medium">{info.value}</p>
-                    </div>
-                  </div>
-                );
+                  );
 
-                return info.link ? (
+                  return info.link ? (
+                    <a 
+                      key={index}
+                      href={info.link}
+                      className="block hover:scale-[1.02] transition-transform"
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <div key={index}>{content}</div>
+                  );
+                })}
+              </div>
+
+              {/* Social Media Links */}
+              <div className="mt-8 pt-6 border-t border-border">
+                <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+                <div className="flex gap-4">
                   <a 
-                    key={index}
-                    href={info.link}
-                    className="block hover:scale-[1.02] transition-transform"
+                    href="https://facebook.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
-                    {content}
+                    <Facebook className="h-5 w-5" />
                   </a>
-                ) : (
-                  <div key={index}>{content}</div>
-                );
-              })}
+                  <a 
+                    href="https://linkedin.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                  <a 
+                    href="https://twitter.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <Twitter className="h-5 w-5" />
+                  </a>
+                  <a 
+                    href="https://instagram.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                </div>
+              </div>
+            </Card>
+
+            {/* Contact Form */}
+            <Card className="p-8 bg-card border-border">
+              <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
+              <ContactForm />
+            </Card>
+          </div>
+
+          {/* Google Map */}
+          <Card className="p-4 bg-card border-border overflow-hidden mt-8">
+            <div className="w-full h-[400px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=110+Conrad+Drive+Craighall+Park+Johannesburg&zoom=15&maptype=roadmap"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: "hue-rotate(20deg) saturate(0.7)" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="My Brand Group Location"
+              />
             </div>
           </Card>
         </div>
