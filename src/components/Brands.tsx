@@ -4,6 +4,7 @@ import volkswagenLogo from "@/assets/brands/volkswagen.png";
 import suzukiLogo from "@/assets/brands/suzuki.png";
 import fordLogo from "@/assets/brands/ford.png";
 import hyundaiLogo from "@/assets/brands/hyundai.png";
+import gmLogo from "@/assets/brands/gm.png";
 import nissanLogo from "@/assets/brands/nissan.png";
 import bmwLogo from "@/assets/brands/bmw.png";
 import mercedesLogo from "@/assets/brands/mercedes.png";
@@ -11,10 +12,13 @@ import audiLogo from "@/assets/brands/audi.png";
 import hondaLogo from "@/assets/brands/honda.png";
 import mazdaLogo from "@/assets/brands/mazda.png";
 import jaguarLogo from "@/assets/brands/jaguar.png";
+import tataLogo from "@/assets/brands/tata.png";
 import kiaLogo from "@/assets/brands/kia.png";
 import jeepLogo from "@/assets/brands/jeep.png";
 import renaultLogo from "@/assets/brands/renault.png";
+import alfaromeoLogo from "@/assets/brands/alfaromeo.png";
 import landroverLogo from "@/assets/brands/landrover.png";
+import gwmLogo from "@/assets/brands/gwm.png";
 
 export const Brands = () => {
   const brands = [
@@ -23,6 +27,7 @@ export const Brands = () => {
     { name: "Suzuki", logo: suzukiLogo },
     { name: "Ford", logo: fordLogo },
     { name: "Hyundai", logo: hyundaiLogo },
+    { name: "GM", logo: gmLogo },
     { name: "Nissan", logo: nissanLogo },
     { name: "BMW", logo: bmwLogo },
     { name: "Mercedes Benz", logo: mercedesLogo },
@@ -30,10 +35,13 @@ export const Brands = () => {
     { name: "Honda", logo: hondaLogo },
     { name: "Mazda", logo: mazdaLogo },
     { name: "Jaguar", logo: jaguarLogo },
+    { name: "Tata", logo: tataLogo },
     { name: "Kia", logo: kiaLogo },
     { name: "Jeep", logo: jeepLogo },
     { name: "Renault", logo: renaultLogo },
+    { name: "Alfa Romeo", logo: alfaromeoLogo },
     { name: "Land Rover", logo: landroverLogo },
+    { name: "GWM", logo: gwmLogo },
   ];
 
   return (
