@@ -1,11 +1,39 @@
 import { Card } from "@/components/ui/card";
+import toyotaLogo from "@/assets/brands/toyota.png";
+import volkswagenLogo from "@/assets/brands/volkswagen.png";
+import suzukiLogo from "@/assets/brands/suzuki.png";
+import fordLogo from "@/assets/brands/ford.png";
+import hyundaiLogo from "@/assets/brands/hyundai.png";
+import nissanLogo from "@/assets/brands/nissan.png";
+import bmwLogo from "@/assets/brands/bmw.png";
+import mercedesLogo from "@/assets/brands/mercedes.png";
+import audiLogo from "@/assets/brands/audi.png";
+import hondaLogo from "@/assets/brands/honda.png";
+import mazdaLogo from "@/assets/brands/mazda.png";
+import jaguarLogo from "@/assets/brands/jaguar.png";
+import kiaLogo from "@/assets/brands/kia.png";
+import jeepLogo from "@/assets/brands/jeep.png";
+import renaultLogo from "@/assets/brands/renault.png";
+import landroverLogo from "@/assets/brands/landrover.png";
 
 export const Brands = () => {
   const brands = [
-    "Toyota", "Volkswagen", "Suzuki", "Ford", "Hyundai", "GM",
-    "Nissan", "BMW", "Mercedes Benz", "Audi", "Honda", "Mazda",
-    "Jaguar", "Tata", "Kia", "Jeep", "Renault", "Alfa Romeo",
-    "Land Rover", "GWM"
+    { name: "Toyota", logo: toyotaLogo },
+    { name: "Volkswagen", logo: volkswagenLogo },
+    { name: "Suzuki", logo: suzukiLogo },
+    { name: "Ford", logo: fordLogo },
+    { name: "Hyundai", logo: hyundaiLogo },
+    { name: "Nissan", logo: nissanLogo },
+    { name: "BMW", logo: bmwLogo },
+    { name: "Mercedes Benz", logo: mercedesLogo },
+    { name: "Audi", logo: audiLogo },
+    { name: "Honda", logo: hondaLogo },
+    { name: "Mazda", logo: mazdaLogo },
+    { name: "Jaguar", logo: jaguarLogo },
+    { name: "Kia", logo: kiaLogo },
+    { name: "Jeep", logo: jeepLogo },
+    { name: "Renault", logo: renaultLogo },
+    { name: "Land Rover", logo: landroverLogo },
   ];
 
   return (
@@ -25,13 +53,17 @@ export const Brands = () => {
           </div>
 
           <Card className="p-8 bg-card border-border">
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
               {brands.map((brand, index) => (
                 <div 
                   key={index}
-                  className="flex items-center justify-center p-4 rounded-lg bg-secondary/50 hover:bg-primary/10 transition-colors border border-border hover:border-primary"
+                  className="flex items-center justify-center p-6 rounded-lg bg-white hover:bg-secondary/50 transition-all hover:scale-105 border border-border hover:border-primary group"
                 >
-                  <span className="text-foreground font-medium text-center">{brand}</span>
+                  <img 
+                    src={brand.logo} 
+                    alt={`${brand.name} logo`}
+                    className="w-full h-auto max-w-[120px] max-h-[80px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
                 </div>
               ))}
             </div>

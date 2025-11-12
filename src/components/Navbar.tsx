@@ -24,7 +24,6 @@ export const Navbar = () => {
     { label: "Services", id: "services" },
     { label: "Team", id: "team" },
     { label: "Brands", id: "brands" },
-    { label: "Clients", id: "clients" },
     { label: "Contact", id: "contact" },
   ];
 
