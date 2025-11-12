@@ -1,32 +1,78 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-showroom.png";
+import { useState, useEffect } from "react";
+import bannerBlackMale from "@/assets/banner-black-male.png";
+import bannerWhiteMale from "@/assets/banner-white-male.png";
+import bannerLady from "@/assets/banner-lady.png";
+
+const heroImages = [bannerBlackMale, bannerWhiteMale, bannerLady];
 
 export const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const parallaxOffset = scrollY * 0.5;
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#E8E8E8] via-[#F0F0F0] to-background">
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-80"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-secondary/30 to-background">
+      {/* Animated Background Images with Parallax */}
+      <div className="absolute inset-0">
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              backgroundImage: `url(${image})`,
+              transform: `translateY(${parallaxOffset}px)`,
+              transition: "transform 0.1s ease-out",
+            }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
+          </div>
+        ))}
       </div>
       
-      <div className="container relative z-10 px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in bg-background/80 backdrop-blur-sm rounded-lg p-8 md:p-12">
+      {/* Content with enhanced parallax */}
+      <div 
+        className="container relative z-10 px-4 py-20"
+        style={{
+          transform: `translateY(${parallaxOffset * -0.3}px)`,
+          transition: "transform 0.1s ease-out",
+        }}
+      >
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <div className="inline-block">
-            <div className="h-1 w-20 bg-primary mx-auto mb-6" />
+            <div className="h-1.5 w-24 bg-primary mx-auto mb-8 animate-pulse" />
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight drop-shadow-lg">
-            MY BRAND <span className="text-primary">GROUP</span>
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tight drop-shadow-2xl leading-tight">
+            MY BRAND <span className="text-primary animate-pulse">GROUP</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light drop-shadow-md">
+          <p className="text-xl md:text-3xl text-foreground max-w-3xl mx-auto font-light drop-shadow-lg leading-relaxed tracking-wide bg-background/70 backdrop-blur-md rounded-lg p-6 md:p-8">
             Specializing in the motor industry, offering Brand new and pre-owned vehicles 
             with exceptional customer service throughout the replacement journey
           </p>
