@@ -8,43 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* MBG Brand Colors */
-    --background: 330 22% 11%;
-    --foreground: 341 71% 98%;
+    /* MBG Brand Colors - Light Grey Theme */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
 
-    --card: 0 0% 15%;
-    --card-foreground: 341 71% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
 
-    --popover: 0 0% 15%;
-    --popover-foreground: 341 71% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
 
     --primary: 41 54% 61%;
-    --primary-foreground: 330 22% 11%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 25%;
-    --secondary-foreground: 341 71% 98%;
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 0 0% 25%;
-    --muted-foreground: 0 0% 75%;
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 41 54% 61%;
-    --accent-foreground: 330 22% 11%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 341 71% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 25%;
-    --input: 0 0% 25%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
     --ring: 41 54% 61%;
 
     --radius: 0.5rem;
 
     /* Custom Brand Variables */
     --gold: 41 54% 61%;
-    --dark: 330 22% 11%;
-    --snow: 341 71% 98%;
-    --graphite: 0 0% 75%;
-    --raisin: 0 0% 15%;
+    --dark: 0 0% 15%;
+    --snow: 0 0% 98%;
+    --graphite: 0 0% 60%;
+    --light-grey: 0 0% 93%;
   }
 }
 

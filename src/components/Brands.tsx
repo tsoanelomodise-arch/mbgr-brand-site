@@ -9,7 +9,7 @@ export const Brands = () => {
   ];
 
   return (
-    <section id="brands" className="py-24 bg-secondary/30">
+    <section id="brands" className="py-24 bg-gradient-to-b from-background to-secondary/50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">

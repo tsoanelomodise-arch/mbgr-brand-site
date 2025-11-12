@@ -39,7 +39,7 @@ export const Team = () => {
   ];
 
   return (
-    <section id="team" className="py-24 bg-background">
+    <section id="team" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
