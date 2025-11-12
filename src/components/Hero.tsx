@@ -10,10 +10,10 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#E8E8E8] via-[#F0F0F0] to-background">
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-80"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#E8E8E8]/90 via-[#F0F0F0]/85 to-background/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40" />
       </div>
       
       <div className="container relative z-10 px-4 py-20">
