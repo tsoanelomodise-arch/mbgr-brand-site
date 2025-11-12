@@ -41,11 +41,12 @@ export const Hero = () => {
         {heroImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+            className={`absolute inset-0 bg-cover transition-opacity duration-1000 ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
             style={{
               backgroundImage: `url(${image})`,
+              backgroundPosition: "center 35%",
               transform: `translateY(${parallaxOffset}px)`,
               transition: "transform 0.1s ease-out",
             }}
