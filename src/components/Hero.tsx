@@ -17,16 +17,16 @@ export const Hero = () => {
       </div>
       
       <div className="container relative z-10 px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in bg-background/80 backdrop-blur-sm rounded-lg p-8 md:p-12">
           <div className="inline-block">
             <div className="h-1 w-20 bg-primary mx-auto mb-6" />
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight drop-shadow-lg">
             MY BRAND <span className="text-primary">GROUP</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light drop-shadow-md">
             Specializing in the motor industry, offering Brand new and pre-owned vehicles 
             with exceptional customer service throughout the replacement journey
           </p>
