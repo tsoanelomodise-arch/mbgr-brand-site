@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import mbgLogo from "@/assets/mbg-logo.png";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,9 +38,9 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-2xl font-bold hover:text-primary transition-colors"
+            className="hover:opacity-80 transition-opacity"
           >
-            MY BRAND <span className="text-primary">GROUP</span>
+            <img src={mbgLogo} alt="MBG Logo" className="h-12" />
           </button>
 
           {/* Desktop Navigation */}

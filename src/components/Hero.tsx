@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-showroom.png";
+import mbgLogo from "@/assets/mbg-logo.png";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -18,13 +19,9 @@ export const Hero = () => {
       
       <div className="container relative z-10 px-4 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in bg-background/80 backdrop-blur-sm rounded-lg p-8 md:p-12">
-          <div className="inline-block">
-            <div className="h-1 w-20 bg-primary mx-auto mb-6" />
+          <div className="inline-block mb-6">
+            <img src={mbgLogo} alt="MBG Logo" className="h-20 md:h-28 mx-auto drop-shadow-2xl" />
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight drop-shadow-lg">
-            MY BRAND <span className="text-primary">GROUP</span>
-          </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light drop-shadow-md">
             Specializing in the motor industry, offering Brand new and pre-owned vehicles 

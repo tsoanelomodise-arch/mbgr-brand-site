@@ -1,4 +1,5 @@
 import { Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
+import mbgLogo from "@/assets/mbg-logo.png";
 
 export const Footer = () => {
   return (
@@ -8,9 +9,7 @@ export const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Brand */}
             <div>
-              <div className="text-2xl font-bold mb-4">
-                MY BRAND <span className="text-primary">GROUP</span>
-              </div>
+              <img src={mbgLogo} alt="MBG Logo" className="h-12 mb-4" />
               <p className="text-sm text-muted-foreground">
                 Specializing in the motor industry with exceptional customer service throughout the replacement journey.
               </p>
