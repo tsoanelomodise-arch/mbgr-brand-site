@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { CreditCard, Car, Truck } from "lucide-react";
-import portraitDuoYellow from "@/assets/portrait-duo-yellow.jpg";
-import portraitFlowers from "@/assets/portrait-flowers.jpg";
+import portraitAfroColorful from "@/assets/portrait-afro-colorful.jpg";
 
 export const Services = () => {
   const services = [
@@ -23,15 +22,12 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden">
+    <section id="services" className="py-24 relative overflow-hidden">
       <div 
-        className="absolute top-10 right-10 w-56 h-32 opacity-15 bg-cover bg-center rounded-lg"
-        style={{ backgroundImage: `url(${portraitDuoYellow})` }}
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${portraitAfroColorful})` }}
       />
-      <div 
-        className="absolute bottom-10 left-10 w-64 h-40 opacity-15 bg-cover bg-center rounded-lg"
-        style={{ backgroundImage: `url(${portraitFlowers})` }}
-      />
+      <div className="absolute inset-0 bg-background/85" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">

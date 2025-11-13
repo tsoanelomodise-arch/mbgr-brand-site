@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Building2, Globe2, Award, Car, Heart, Zap } from "lucide-react";
-import portraitSunglassesRed from "@/assets/portrait-sunglasses-red.jpg";
-import portraitAfroColorful from "@/assets/portrait-afro-colorful.jpg";
+import portraitDuoYellow from "@/assets/portrait-duo-yellow.jpg";
 
 export const KeyFacts = () => {
   const facts = [
@@ -38,15 +37,12 @@ export const KeyFacts = () => {
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden">
       <div 
-        className="absolute top-20 left-0 w-48 h-48 rounded-full opacity-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${portraitSunglassesRed})` }}
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${portraitDuoYellow})` }}
       />
-      <div 
-        className="absolute bottom-20 right-0 w-48 h-48 rounded-full opacity-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${portraitAfroColorful})` }}
-      />
+      <div className="absolute inset-0 bg-background/90" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
