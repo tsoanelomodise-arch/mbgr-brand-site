@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import mbgLogo from "@/assets/mbg-logo.png";
+import mbgLogo from "@/assets/mbg-logo-new.png";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

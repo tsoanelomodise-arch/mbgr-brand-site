@@ -1,5 +1,5 @@
 import { Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
-import mbgLogo from "@/assets/mbg-logo.png";
+import mbgLogo from "@/assets/mbg-logo-new.png";
 
 export const Footer = () => {
   return (
