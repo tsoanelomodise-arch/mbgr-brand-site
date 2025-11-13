@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import patternTriangles from "@/assets/pattern-triangles.jpg";
 import toyotaLogo from "@/assets/brands/toyota.png";
 import volkswagenLogo from "@/assets/brands/volkswagen.png";
 import suzukiLogo from "@/assets/brands/suzuki.png";
@@ -45,8 +46,12 @@ export const Brands = () => {
   ];
 
   return (
-    <section id="brands" className="py-24 bg-gradient-to-b from-background to-secondary/50">
-      <div className="container mx-auto px-4">
+    <section id="brands" className="py-24 bg-gradient-to-b from-background to-secondary/50 relative overflow-hidden">
+      <div 
+        className="absolute bottom-0 left-0 w-full h-48 opacity-10 bg-cover bg-center"
+        style={{ backgroundImage: `url(${patternTriangles})` }}
+      />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <div className="inline-block">

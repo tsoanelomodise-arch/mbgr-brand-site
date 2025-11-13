@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Users, Briefcase, Settings, Calculator, GraduationCap } from "lucide-react";
+import patternGeometric from "@/assets/pattern-geometric.jpg";
 
 export const Team = () => {
   const teamMembers = [
@@ -39,8 +40,12 @@ export const Team = () => {
   ];
 
   return (
-    <section id="team" className="py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="team" className="py-24 bg-white relative overflow-hidden">
+      <div 
+        className="absolute inset-0 opacity-5 bg-repeat"
+        style={{ backgroundImage: `url(${patternGeometric})`, backgroundSize: '400px' }}
+      />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <div className="inline-block">
