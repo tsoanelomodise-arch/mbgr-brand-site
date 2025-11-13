@@ -46,7 +46,7 @@ export const Hero = () => {
             }`}
             style={{
               backgroundImage: `url(${image})`,
-              backgroundPosition: "center 35%",
+              backgroundPosition: "center 45%",
               transform: `translateY(${parallaxOffset}px)`,
               transition: "transform 0.1s ease-out",
             }}
