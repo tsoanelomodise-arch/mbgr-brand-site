@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { MapPin, Phone, FileText, Mail, Globe, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 import { ContactForm } from "./ContactForm";
+import portraitSunglassesRed from "@/assets/portrait-sunglasses-red.jpg";
+import portraitFlowers from "@/assets/portrait-flowers.jpg";
 
 export const Contact = () => {
   const contactInfo = [
@@ -35,8 +37,16 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-secondary/50 to-background">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-24 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden">
+      <div 
+        className="absolute top-0 left-0 w-40 h-40 rounded-full opacity-10 bg-cover bg-center"
+        style={{ backgroundImage: `url(${portraitSunglassesRed})` }}
+      />
+      <div 
+        className="absolute bottom-0 right-0 w-56 h-56 opacity-10 bg-cover bg-center"
+        style={{ backgroundImage: `url(${portraitFlowers})` }}
+      />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <div className="inline-block">
