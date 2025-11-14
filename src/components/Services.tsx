@@ -1,6 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { CreditCard, Car, Truck } from "lucide-react";
-import portraitAfroColorful from "@/assets/portrait-afro-colorful.jpg";
 
 export const Services = () => {
   const services = [
@@ -23,11 +22,7 @@ export const Services = () => {
 
   return (
     <section id="services" className="py-24 relative overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${portraitAfroColorful})` }}
-      />
-      <div className="absolute inset-0 bg-background/85" />
+      <div className="absolute inset-0 bg-background" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
