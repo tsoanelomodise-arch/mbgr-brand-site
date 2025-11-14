@@ -1,6 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
-import portraitSunglassesRed from "@/assets/portrait-sunglasses-red.jpg";
 
 export const About = () => {
   const industries = [
@@ -20,11 +19,7 @@ export const About = () => {
 
   return (
     <section id="about" className="py-24 relative overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${portraitSunglassesRed})` }}
-      />
-      <div className="absolute inset-0 bg-background/85" />
+      <div className="absolute inset-0 bg-background" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Who Are We */}
