@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import bannerBlackMale from "@/assets/banner-black-male.png";
-import bannerWhiteMale from "@/assets/banner-white-male.png";
-import bannerLady from "@/assets/banner-lady.png";
+import heroPerson1 from "@/assets/hero-person-1.png";
+import heroPerson2 from "@/assets/hero-person-2.png";
+import heroPerson3 from "@/assets/hero-person-3.png";
+import heroPerson4 from "@/assets/hero-person-4.png";
 
-const heroImages = [bannerBlackMale, bannerWhiteMale, bannerLady];
+const heroImages = [heroPerson1, heroPerson2, heroPerson3, heroPerson4];
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
