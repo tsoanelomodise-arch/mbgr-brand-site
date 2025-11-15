@@ -74,9 +74,11 @@ export const Hero = () => {
             />
           </div>
           
-          <p className="text-3xl md:text-5xl text-foreground font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] tracking-wide">
-            Vehicle Replacement Specialists
-          </p>
+          <div className="inline-block px-8 py-4 rounded-lg" style={{ backgroundColor: 'rgba(209, 175, 102, 0.85)' }}>
+            <p className="text-3xl md:text-5xl text-foreground font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] tracking-wide">
+              Vehicle Replacement Specialists
+            </p>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button 
