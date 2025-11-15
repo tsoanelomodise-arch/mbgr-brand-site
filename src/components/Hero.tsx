@@ -42,17 +42,16 @@ export const Hero = () => {
         {heroImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-cover transition-opacity duration-1000 ${
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
             style={{
               backgroundImage: `url(${image})`,
-              backgroundPosition: "center calc(-60% + 45px)",
               transform: `translateY(${parallaxOffset}px)`,
               transition: "transform 0.1s ease-out",
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/70" />
           </div>
         ))}
       </div>
@@ -70,14 +69,16 @@ export const Hero = () => {
             <div className="h-1.5 w-24 bg-primary mx-auto mb-8 animate-pulse" />
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight drop-shadow-2xl leading-tight">
-            MY BRAND <span className="text-primary animate-pulse">GROUP</span>
-          </h1>
-          
-          <p className="text-xl md:text-3xl text-foreground max-w-3xl mx-auto font-light drop-shadow-lg leading-relaxed tracking-wide">
-            Specializing in the motor industry, offering Brand new and pre-owned vehicles 
-            with exceptional customer service throughout the replacement journey
-          </p>
+          <div className="bg-background/80 backdrop-blur-sm py-8 px-6 rounded-lg">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight drop-shadow-2xl leading-tight">
+              MY BRAND <span className="text-primary animate-pulse">GROUP</span>
+            </h1>
+            
+            <p className="text-lg md:text-2xl text-foreground max-w-3xl mx-auto font-light drop-shadow-lg leading-relaxed tracking-wide mt-6">
+              Specializing in the motor industry, offering Brand new and pre-owned vehicles 
+              with exceptional customer service throughout the replacement journey
+            </p>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button 
