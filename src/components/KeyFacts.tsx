@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Building2, Globe2, Award, Car, Heart, Zap } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 export const KeyFacts = () => {
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
   const facts = [
     {
       icon: Globe2,
@@ -38,7 +40,12 @@ export const KeyFacts = () => {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-background" />
-      <div className="container mx-auto px-4 relative z-10">
+      <div 
+        ref={ref}
+        className={`container mx-auto px-4 relative z-10 transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <div className="inline-block">
