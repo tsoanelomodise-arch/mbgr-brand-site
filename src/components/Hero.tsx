@@ -59,7 +59,7 @@ export const Hero = () => {
             }`}
             style={{
               backgroundImage: `url(${image})`,
-              transform: `translateY(${parallaxOffset}px) ${index === 1 ? 'translateX(35px)' : index === 2 ? 'translateY(-15px)' : ''}`,
+              transform: `translateY(${parallaxOffset}px) ${index === 0 ? 'translateY(20px)' : index === 1 ? 'translateX(35px) translateY(20px)' : index === 2 ? 'translateY(-15px)' : ''}`,
               transition: "transform 0.1s ease-out",
             }}
           >
