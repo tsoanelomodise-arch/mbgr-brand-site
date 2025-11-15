@@ -74,7 +74,7 @@ export const Hero = () => {
             />
           </div>
           
-          <p className="text-3xl md:text-5xl text-foreground font-bold drop-shadow-lg tracking-wide">
+          <p className="text-3xl md:text-5xl text-foreground font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] tracking-wide">
             Vehicle Replacement Specialists
           </p>
           
