@@ -102,14 +102,14 @@ export const Hero = () => {
       
       {/* Content with enhanced parallax */}
       <div 
-        className="container relative z-10 px-4 py-20"
+        className="container relative z-10 px-4 py-12"
         style={{
           transform: `translateY(${parallaxOffset * -0.3}px)`,
           transition: "transform 0.1s ease-out",
         }}
       >
-        <div className="max-w-4xl space-y-8 animate-fade-in">
-          <div className="mb-8">
+        <div className="max-w-4xl space-y-6 animate-fade-in -mt-16">
+          <div className="mb-6">
             <img 
               src={mbgLogo} 
               alt="MY BRAND GROUP" 
@@ -117,13 +117,11 @@ export const Hero = () => {
             />
           </div>
           
-          <div className="inline-block px-8 py-4 rounded-lg" style={{ backgroundColor: 'rgba(209, 175, 102, 0.85)' }}>
-            <p className="text-3xl md:text-5xl text-foreground font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] tracking-wide">
-              Vehicle Replacement Specialists
-            </p>
-          </div>
+          <p className="text-3xl md:text-5xl text-foreground font-bold drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] tracking-wide">
+            Vehicle Replacement Specialists
+          </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 items-start pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 items-start pt-6">
             <Button 
               size="lg" 
               className="group"
