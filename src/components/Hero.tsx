@@ -59,7 +59,7 @@ export const Hero = () => {
             }`}
             style={{
               backgroundImage: `url(${image})`,
-              transform: `translateY(${parallaxOffset}px) ${index === 1 ? 'translateX(20px)' : ''}`,
+              transform: `translateY(${parallaxOffset}px) ${index === 1 ? 'translateX(35px)' : index === 2 ? 'translateY(-15px)' : ''}`,
               transition: "transform 0.1s ease-out",
             }}
           >
@@ -117,7 +117,7 @@ export const Hero = () => {
             />
           </div>
           
-          <p className="text-3xl md:text-5xl text-foreground font-bold drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] tracking-wide">
+          <p className="text-3xl md:text-5xl text-foreground font-bold drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] [text-shadow:_0_2px_8px_rgba(209,175,102,0.3)] tracking-wide">
             Vehicle Replacement Specialists
           </p>
           
