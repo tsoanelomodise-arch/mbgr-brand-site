@@ -52,7 +52,7 @@ export const Hero = () => {
               transition: "transform 0.1s ease-out",
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/70" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/90" />
           </div>
         ))}
       </div>
