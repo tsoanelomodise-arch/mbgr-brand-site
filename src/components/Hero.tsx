@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import heroPerson1 from "@/assets/hero-person-1.png";
 import heroPerson2 from "@/assets/hero-person-2.png";
@@ -30,6 +30,18 @@ export const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const goToImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+  };
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -54,6 +66,38 @@ export const Hero = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/90" />
           </div>
+        ))}
+      </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrevious}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-sm transition-all hover:scale-110"
+        aria-label="Previous image"
+      >
+        <ChevronLeft className="h-6 w-6 text-foreground" />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-sm transition-all hover:scale-110"
+        aria-label="Next image"
+      >
+        <ChevronRight className="h-6 w-6 text-foreground" />
+      </button>
+
+      {/* Dot Indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToImage(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              index === currentImageIndex
+                ? "bg-primary w-8"
+                : "bg-background/40 hover:bg-background/60"
+            }`}
+            aria-label={`Go to image ${index + 1}`}
+          />
         ))}
       </div>
       
