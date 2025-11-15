@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 export const About = () => {
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
   const industries = [
     "Insurance industry supply",
     "Retail market",
@@ -20,7 +22,12 @@ export const About = () => {
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-background" />
-      <div className="container mx-auto px-4 relative z-10">
+      <div 
+        ref={ref}
+        className={`container mx-auto px-4 relative z-10 transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Who Are We */}
           <div className="text-center space-y-6">

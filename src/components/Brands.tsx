@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import portraitDuoYellow from "@/assets/portrait-duo-yellow.jpg";
 import toyotaLogo from "@/assets/brands/toyota.png";
 import volkswagenLogo from "@/assets/brands/volkswagen.png";
@@ -34,6 +35,7 @@ export const Brands = () => {
   const autoplayPlugin = useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
   );
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
 
   const brands = [
     { name: "Toyota", logo: toyotaLogo },
@@ -65,7 +67,12 @@ export const Brands = () => {
         style={{ backgroundImage: `url(${portraitDuoYellow})` }}
       />
       <div className="absolute inset-0 bg-background/85" />
-      <div className="container mx-auto px-4 relative z-10">
+      <div 
+        ref={ref}
+        className={`container mx-auto px-4 relative z-10 transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <div className="inline-block">

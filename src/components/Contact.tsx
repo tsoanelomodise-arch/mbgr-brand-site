@@ -1,9 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { MapPin, Phone, FileText, Mail, Globe, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 import { ContactForm } from "./ContactForm";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import portraitSunglassesRed from "@/assets/portrait-sunglasses-red.jpg";
 
 export const Contact = () => {
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
   const contactInfo = [
     {
       icon: MapPin,
@@ -42,7 +44,12 @@ export const Contact = () => {
         style={{ backgroundImage: `url(${portraitSunglassesRed})` }}
       />
       <div className="absolute inset-0 bg-background/85" />
-      <div className="container mx-auto px-4 relative z-10">
+      <div 
+        ref={ref}
+        className={`container mx-auto px-4 relative z-10 transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <div className="inline-block">
