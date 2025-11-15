@@ -51,7 +51,7 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-secondary/30 to-background">
       {/* Animated Background Images with Parallax */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" style={{ transform: 'translateY(30px)' }}>
         {heroImages.map((image, index) => (
           <div
             key={index}
