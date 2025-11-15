@@ -1,4 +1,11 @@
 import { Card } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import portraitDuoYellow from "@/assets/portrait-duo-yellow.jpg";
 import toyotaLogo from "@/assets/brands/toyota.png";
 import volkswagenLogo from "@/assets/brands/volkswagen.png";
@@ -67,20 +74,29 @@ export const Brands = () => {
           </div>
 
           <Card className="p-8 bg-card border-border">
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
-              {brands.map((brand, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center justify-center p-6 rounded-lg bg-white hover:bg-secondary/50 transition-all hover:scale-105 border border-border hover:border-primary group"
-                >
-                  <img 
-                    src={brand.logo} 
-                    alt={`${brand.name} logo`}
-                    className="w-full h-auto max-w-[120px] max-h-[80px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-              ))}
-            </div>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {brands.map((brand, index) => (
+                  <CarouselItem key={index} className="pl-4 md:basis-1/3 lg:basis-1/4">
+                    <div className="flex items-center justify-center p-6 rounded-lg bg-white hover:bg-secondary/50 transition-all hover:scale-105 border border-border hover:border-primary group h-32">
+                      <img 
+                        src={brand.logo} 
+                        alt={`${brand.name} logo`}
+                        className="w-full h-auto max-w-[120px] max-h-[80px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-0" />
+              <CarouselNext className="right-0" />
+            </Carousel>
           </Card>
         </div>
       </div>
