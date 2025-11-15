@@ -4,10 +4,9 @@ import { useState, useEffect } from "react";
 import heroPerson1 from "@/assets/hero-person-1.png";
 import heroPerson2 from "@/assets/hero-person-2.png";
 import heroPerson3 from "@/assets/hero-person-3.png";
-import heroPerson4 from "@/assets/hero-person-4.png";
 import mbgLogo from "@/assets/mbg-logo-new.png";
 
-const heroImages = [heroPerson1, heroPerson2, heroPerson3, heroPerson4];
+const heroImages = [heroPerson1, heroPerson2, heroPerson3];
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -51,7 +50,7 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-secondary/30 to-background">
       {/* Animated Background Images with Parallax */}
-      <div className="absolute inset-0" style={{ transform: 'translateY(30px)' }}>
+      <div className="absolute inset-0" style={{ transform: 'translateY(50px)' }}>
         {heroImages.map((image, index) => (
           <div
             key={index}
