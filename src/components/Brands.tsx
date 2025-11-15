@@ -33,7 +33,7 @@ import gwmLogo from "@/assets/brands/gwm.png";
 
 export const Brands = () => {
   const autoplayPlugin = useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
 
