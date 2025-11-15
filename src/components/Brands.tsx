@@ -6,6 +6,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 import portraitDuoYellow from "@/assets/portrait-duo-yellow.jpg";
 import toyotaLogo from "@/assets/brands/toyota.png";
 import volkswagenLogo from "@/assets/brands/volkswagen.png";
@@ -29,6 +31,10 @@ import landroverLogo from "@/assets/brands/landrover.png";
 import gwmLogo from "@/assets/brands/gwm.png";
 
 export const Brands = () => {
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
+  );
+
   const brands = [
     { name: "Toyota", logo: toyotaLogo },
     { name: "Volkswagen", logo: volkswagenLogo },
@@ -79,6 +85,7 @@ export const Brands = () => {
                 align: "start",
                 loop: true,
               }}
+              plugins={[autoplayPlugin.current]}
               className="w-full"
             >
               <CarouselContent className="-ml-4">
