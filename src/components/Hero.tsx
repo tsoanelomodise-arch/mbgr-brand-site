@@ -46,7 +46,7 @@ export const Hero = () => {
             }`}
             style={{
               backgroundImage: `url(${image})`,
-              backgroundPosition: "center calc(-60% + 30px)",
+              backgroundPosition: "center calc(-60% + 45px)",
               transform: `translateY(${parallaxOffset}px)`,
               transition: "transform 0.1s ease-out",
             }}
@@ -73,7 +73,7 @@ export const Hero = () => {
             MY BRAND <span className="text-primary animate-pulse">GROUP</span>
           </h1>
           
-          <p className="text-xl md:text-3xl text-foreground max-w-3xl mx-auto font-light drop-shadow-lg leading-relaxed tracking-wide bg-background/70 backdrop-blur-md rounded-lg p-6 md:p-8">
+          <p className="text-xl md:text-3xl text-foreground max-w-3xl mx-auto font-light drop-shadow-lg leading-relaxed tracking-wide">
             Specializing in the motor industry, offering Brand new and pre-owned vehicles 
             with exceptional customer service throughout the replacement journey
           </p>
