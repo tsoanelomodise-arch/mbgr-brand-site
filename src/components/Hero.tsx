@@ -5,6 +5,7 @@ import heroPerson1 from "@/assets/hero-person-1.png";
 import heroPerson2 from "@/assets/hero-person-2.png";
 import heroPerson3 from "@/assets/hero-person-3.png";
 import heroPerson4 from "@/assets/hero-person-4.png";
+import mbgLogo from "@/assets/mbg-logo-new.png";
 
 const heroImages = [heroPerson1, heroPerson2, heroPerson3, heroPerson4];
 
@@ -65,20 +66,17 @@ export const Hero = () => {
         }}
       >
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          <div className="inline-block">
-            <div className="h-1.5 w-24 bg-primary mx-auto mb-8 animate-pulse" />
+          <div className="inline-block mb-8">
+            <img 
+              src={mbgLogo} 
+              alt="MY BRAND GROUP" 
+              className="h-32 md:h-48 mx-auto drop-shadow-2xl"
+            />
           </div>
           
-          <div className="bg-background/80 backdrop-blur-sm py-8 px-6 rounded-lg">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight drop-shadow-2xl leading-tight">
-              MY BRAND <span className="text-primary animate-pulse">GROUP</span>
-            </h1>
-            
-            <p className="text-lg md:text-2xl text-foreground max-w-3xl mx-auto font-light drop-shadow-lg leading-relaxed tracking-wide mt-6">
-              Specializing in the motor industry, offering Brand new and pre-owned vehicles 
-              with exceptional customer service throughout the replacement journey
-            </p>
-          </div>
+          <p className="text-3xl md:text-5xl text-foreground font-bold drop-shadow-lg tracking-wide">
+            Vehicle Replacement Specialists
+          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button 
