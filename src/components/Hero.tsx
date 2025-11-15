@@ -108,12 +108,12 @@ export const Hero = () => {
           transition: "transform 0.1s ease-out",
         }}
       >
-        <div className="max-w-4xl space-y-6 animate-fade-in -mt-16">
+        <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in -mt-16">
           <div className="mb-6">
             <img 
               src={mbgLogo} 
               alt="MY BRAND GROUP" 
-              className="h-32 md:h-48 drop-shadow-2xl"
+              className="h-32 md:h-48 mx-auto drop-shadow-2xl"
             />
           </div>
           
@@ -121,7 +121,7 @@ export const Hero = () => {
             Vehicle Replacement Specialists
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 items-start pt-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
             <Button 
               size="lg" 
               className="group"
