@@ -27,9 +27,7 @@ export const Navbar = () => {
   };
 
   const navLinks = [
-    { label: "Services", id: "services" },
     { label: "Brands", id: "brands" },
-    { label: "Territories", id: "territories" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -61,6 +59,20 @@ export const Navbar = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => scrollToSection("key-facts")}>
                   Key Facts
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1">
+                Services
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem onClick={() => scrollToSection("services")}>
+                  Our Services
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => scrollToSection("territories")}>
+                  Territories
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -107,6 +119,23 @@ export const Navbar = () => {
                     className="text-foreground hover:text-primary transition-colors text-left block"
                   >
                     Key Facts
+                  </button>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="font-medium text-foreground">Services</div>
+                <div className="pl-4 space-y-2">
+                  <button
+                    onClick={() => scrollToSection("services")}
+                    className="text-foreground hover:text-primary transition-colors text-left block"
+                  >
+                    Our Services
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("territories")}
+                    className="text-foreground hover:text-primary transition-colors text-left block"
+                  >
+                    Territories
                   </button>
                 </div>
               </div>
