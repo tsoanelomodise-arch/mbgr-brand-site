@@ -147,7 +147,7 @@ export const Contact = () => {
           <Card className="p-4 bg-card border-border overflow-hidden mt-8">
             <div className="w-full h-[400px] rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=110+Conrad+Drive+Craighall+Park+Johannesburg&zoom=15&maptype=roadmap"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBok5Lep0qeiye47t2V0jB0ilOfFMDQODI&q=110+Conrad+Drive+Craighall+Park+Johannesburg&zoom=15&maptype=roadmap"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: "hue-rotate(20deg) saturate(0.7)" }}
