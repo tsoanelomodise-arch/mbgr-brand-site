@@ -54,6 +54,9 @@ export const Navbar = () => {
                 {link.label}
               </button>
             ))}
+            <Button onClick={() => {}} className="ml-4">
+              Login
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,6 +83,9 @@ export const Navbar = () => {
                   {link.label}
                 </button>
               ))}
+              <Button onClick={() => {}} className="w-full">
+                Login
+              </Button>
             </div>
           </div>
         )}
