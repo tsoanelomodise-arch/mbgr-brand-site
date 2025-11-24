@@ -108,7 +108,7 @@ export const Hero = () => {
           transition: "transform 0.1s ease-out",
         }}
       >
-        <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in -mt-16">
+        <div className="max-w-4xl mx-auto text-left space-y-6 animate-fade-in -mt-16">
           <div className="mb-6">
             <img 
               src={mbgLogo} 
@@ -121,7 +121,7 @@ export const Hero = () => {
             Vehicle Replacement Specialists
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-start items-center pt-6">
             <Button 
               size="lg" 
               className="group"
