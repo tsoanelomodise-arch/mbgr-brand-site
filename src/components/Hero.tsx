@@ -118,7 +118,9 @@ export const Hero = () => {
           </div>
           
           <p className="text-3xl md:text-5xl text-foreground font-bold drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] [text-shadow:_0_2px_8px_rgba(209,175,102,0.3)] tracking-wide">
-            Vehicle Replacement Specialists
+            Vehicle<br />
+            Replacement<br />
+            Specialists
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-start items-center pt-6">
