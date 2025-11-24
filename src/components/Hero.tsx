@@ -113,7 +113,7 @@ export const Hero = () => {
             <img 
               src={mbgLogo} 
               alt="MY BRAND GROUP" 
-              className="h-32 md:h-48 mx-auto drop-shadow-2xl"
+              className="h-32 md:h-48 drop-shadow-2xl"
             />
           </div>
           
