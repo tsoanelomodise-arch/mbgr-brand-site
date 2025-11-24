@@ -1,4 +1,6 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { CheckCircle2 } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
@@ -42,6 +44,34 @@ export const About = () => {
               holding the position of a supplier and retailer, offering a large selection of the finest Brand new 
               and 1 year pre-owned vehicles.
             </p>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="outline" size="lg" className="mt-4">
+                  Read More
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+                <DialogHeader>
+                  <DialogTitle className="text-3xl font-bold text-center mb-6">
+                    More About <span className="text-primary">Us</span>
+                  </DialogTitle>
+                </DialogHeader>
+                <div className="space-y-6 text-foreground">
+                  <p className="text-lg leading-relaxed">
+                    My Brand Group is South Africa's leading authority in Insurance Vehicle Replacement. Trusted by leading insurers, banks, and automotive manufacturers to protect customer loyalty at the most critical moment of the ownership journey. We deliver a seamless, premium replacement experience by securing a like-for-like vehicle, eliminating the need for refinancing or a new procurement process. The result: dramatically reduced friction, faster cycle times, and meaningful savings for both the institution and the customer.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Our value lies in what we safeguard: relationships, trust, and brand affinity. Insurers and banks benefit from improved retention and a smoother claims process, while OEMs retain customers within their brand ecosystem through a controlled, high-touch replacement journey that reinforces confidence in the brand. We integrate effortlessly into existing operations, becoming an invisible but essential extension of our partners' value chains.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    With deep industry relationships, a proven operational engine, and a customer-centric philosophy, My Brand Group delivers reliability at scale. We are the trusted partner behind the scenes—protecting your brand, strengthening your customer relationships, and elevating the experience when it matters most.
+                  </p>
+                  <p className="text-xl font-semibold text-center text-primary mt-8">
+                    This is My Brand Group
+                  </p>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
 
           {/* Industry Supply */}
