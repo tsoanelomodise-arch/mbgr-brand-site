@@ -1,6 +1,7 @@
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Card } from "./ui/card";
 import { MapPin } from "lucide-react";
+import { InteractiveMap } from "./InteractiveMap";
 
 export const Territories = () => {
   const { ref, isVisible } = useIntersectionObserver();
@@ -72,17 +73,7 @@ export const Territories = () => {
 
         <Card className="overflow-hidden border-primary/20 shadow-lg">
           <div className="relative w-full" style={{ height: "600px" }}>
-            <iframe
-              title="Territories Coverage Map"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBok5Lep0qeiye47t2V0jB0ilOfFMDQODI&q=Southern+Africa&zoom=5&center=-26,24"
-            ></iframe>
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-background/20 via-transparent to-transparent"></div>
+            <InteractiveMap />
           </div>
           
           <div className="p-6 bg-card">
