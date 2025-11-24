@@ -26,11 +26,6 @@ export const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const openAboutModal = () => {
-    window.dispatchEvent(new Event('openAboutModal'));
-    setIsMobileMenuOpen(false);
-  };
-
   const navLinks = [
     { label: "Services", id: "services" },
     { label: "Brands", id: "brands" },
@@ -65,9 +60,6 @@ export const Navbar = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => scrollToSection("key-facts")}>
                   Key Facts
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={openAboutModal}>
-                  More About Us
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -114,12 +106,6 @@ export const Navbar = () => {
                     className="text-foreground hover:text-primary transition-colors text-left block"
                   >
                     Key Facts
-                  </button>
-                  <button
-                    onClick={openAboutModal}
-                    className="text-foreground hover:text-primary transition-colors text-left block"
-                  >
-                    More About Us
                   </button>
                 </div>
               </div>
