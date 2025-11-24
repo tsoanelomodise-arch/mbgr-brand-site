@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import mbgLogo from "@/assets/mbg-logo-new.png";
 
 export const Navbar = () => {
@@ -20,9 +26,12 @@ export const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const openAboutModal = () => {
+    window.dispatchEvent(new Event('openAboutModal'));
+    setIsMobileMenuOpen(false);
+  };
+
   const navLinks = [
-    { label: "About", id: "about" },
-    { label: "Key Facts", id: "key-facts" },
     { label: "Services", id: "services" },
     { label: "Brands", id: "brands" },
     { label: "Contact", id: "contact" },
@@ -45,6 +54,23 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1">
+                About
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem onClick={() => scrollToSection("about")}>
+                  About Us
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => scrollToSection("key-facts")}>
+                  Key Facts
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={openAboutModal}>
+                  More About Us
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -74,6 +100,29 @@ export const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
+              <div className="space-y-2">
+                <div className="font-medium text-foreground">About</div>
+                <div className="pl-4 space-y-2">
+                  <button
+                    onClick={() => scrollToSection("about")}
+                    className="text-foreground hover:text-primary transition-colors text-left block"
+                  >
+                    About Us
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("key-facts")}
+                    className="text-foreground hover:text-primary transition-colors text-left block"
+                  >
+                    Key Facts
+                  </button>
+                  <button
+                    onClick={openAboutModal}
+                    className="text-foreground hover:text-primary transition-colors text-left block"
+                  >
+                    More About Us
+                  </button>
+                </div>
+              </div>
               {navLinks.map((link) => (
                 <button
                   key={link.id}
