@@ -80,7 +80,7 @@ export const Territories = () => {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBok5Lep0qeiye47t2V0jB0ilOfFMDQODI&center=-24.5,25.5&zoom=5&maptype=terrain"
+              src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d7334896.096659863!2d22.5!3d-24.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!3m2!1d-26.2041028!2d28.0473051!4m5!1s0x1c34f14cfc72797b%3A0x304cf2f83d2fd90e!2sCape%20Town%2C%20South%20Africa!3m2!1d-33.9248685!2d18.424055299999998!4m5!1s0x1e956318ee3c1175%3A0x3e88c8b6bf1aa23f!2sDurban%2C%20South%20Africa!3m2!1d-29.8586804!2d31.0218404!4m5!1s0x1c0b07b5fc41754f%3A0x41c0b47dc7050f8!2sWindhoek%2C%20Namibia!3m2!1d-22.5608807!2d17.0657549!4m5!1s0x1e9fd05b1e5b8101%3A0x26509f85f56f45ec!2sGaborone%2C%20Botswana!3m2!1d-24.6282411!2d25.9231846!5e0!3m2!1sen!2s!4v1234567890"
             ></iframe>
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-background/20 via-transparent to-transparent"></div>
           </div>
