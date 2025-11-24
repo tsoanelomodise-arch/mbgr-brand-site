@@ -50,25 +50,66 @@ export const About = () => {
                   Read More
                 </Button>
               </DialogTrigger>
-              <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-                <DialogHeader>
-                  <DialogTitle className="text-3xl font-bold text-center mb-6">
+              <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto border-primary/20">
+                <DialogHeader className="space-y-4 pb-6">
+                  <div className="mx-auto w-20 h-1 bg-primary rounded-full" />
+                  <DialogTitle className="text-4xl font-bold text-center">
                     More About <span className="text-primary">Us</span>
                   </DialogTitle>
+                  <p className="text-center text-muted-foreground text-lg">
+                    South Africa's Leading Authority in Insurance Vehicle Replacement
+                  </p>
                 </DialogHeader>
-                <div className="space-y-6 text-foreground">
-                  <p className="text-lg leading-relaxed">
-                    My Brand Group is South Africa's leading authority in Insurance Vehicle Replacement. Trusted by leading insurers, banks, and automotive manufacturers to protect customer loyalty at the most critical moment of the ownership journey. We deliver a seamless, premium replacement experience by securing a like-for-like vehicle, eliminating the need for refinancing or a new procurement process. The result: dramatically reduced friction, faster cycle times, and meaningful savings for both the institution and the customer.
-                  </p>
-                  <p className="text-lg leading-relaxed">
-                    Our value lies in what we safeguard: relationships, trust, and brand affinity. Insurers and banks benefit from improved retention and a smoother claims process, while OEMs retain customers within their brand ecosystem through a controlled, high-touch replacement journey that reinforces confidence in the brand. We integrate effortlessly into existing operations, becoming an invisible but essential extension of our partners' value chains.
-                  </p>
-                  <p className="text-lg leading-relaxed">
-                    With deep industry relationships, a proven operational engine, and a customer-centric philosophy, My Brand Group delivers reliability at scale. We are the trusted partner behind the scenes—protecting your brand, strengthening your customer relationships, and elevating the experience when it matters most.
-                  </p>
-                  <p className="text-xl font-semibold text-center text-primary mt-8">
-                    This is My Brand Group
-                  </p>
+                <div className="space-y-8">
+                  <div className="relative">
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary/50 to-transparent rounded-full" />
+                    <div className="pl-6 space-y-6">
+                      <div className="animate-fade-in">
+                        <h3 className="text-xl font-semibold text-primary mb-3 flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5" />
+                          Our Mission
+                        </h3>
+                        <p className="text-base leading-relaxed text-foreground">
+                          My Brand Group is South Africa's leading authority in Insurance Vehicle Replacement. Trusted by leading insurers, banks, and automotive manufacturers to protect customer loyalty at the most critical moment of the ownership journey. We deliver a seamless, premium replacement experience by securing a like-for-like vehicle, eliminating the need for refinancing or a new procurement process. The result: dramatically reduced friction, faster cycle times, and meaningful savings for both the institution and the customer.
+                        </p>
+                      </div>
+                      
+                      <div className="h-px bg-border" />
+                      
+                      <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
+                        <h3 className="text-xl font-semibold text-primary mb-3 flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5" />
+                          Our Value Proposition
+                        </h3>
+                        <p className="text-base leading-relaxed text-foreground">
+                          Our value lies in what we safeguard: relationships, trust, and brand affinity. Insurers and banks benefit from improved retention and a smoother claims process, while OEMs retain customers within their brand ecosystem through a controlled, high-touch replacement journey that reinforces confidence in the brand. We integrate effortlessly into existing operations, becoming an invisible but essential extension of our partners' value chains.
+                        </p>
+                      </div>
+                      
+                      <div className="h-px bg-border" />
+                      
+                      <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                        <h3 className="text-xl font-semibold text-primary mb-3 flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5" />
+                          Why Choose Us
+                        </h3>
+                        <p className="text-base leading-relaxed text-foreground">
+                          With deep industry relationships, a proven operational engine, and a customer-centric philosophy, My Brand Group delivers reliability at scale. We are the trusted partner behind the scenes—protecting your brand, strengthening your customer relationships, and elevating the experience when it matters most.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="relative mt-8 pt-6 border-t-2 border-primary/20">
+                    <div className="text-center space-y-2 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                      <p className="text-2xl font-bold text-primary tracking-wide">
+                        This is My Brand Group
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        Your Trusted Partner in Vehicle Replacement Excellence
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </DialogContent>
             </Dialog>
