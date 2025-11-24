@@ -23,7 +23,6 @@ export const Navbar = () => {
   const navLinks = [
     { label: "About", id: "about" },
     { label: "Services", id: "services" },
-    { label: "Team", id: "team" },
     { label: "Brands", id: "brands" },
     { label: "Contact", id: "contact" },
   ];
