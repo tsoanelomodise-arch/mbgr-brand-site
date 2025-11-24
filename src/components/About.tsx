@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -6,6 +7,13 @@ import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 export const About = () => {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpenModal = () => setIsModalOpen(true);
+    window.addEventListener('openAboutModal', handleOpenModal);
+    return () => window.removeEventListener('openAboutModal', handleOpenModal);
+  }, []);
   const industries = [
     "Insurance industry supply",
     "Retail market",
@@ -44,7 +52,7 @@ export const About = () => {
               holding the position of a supplier and retailer, offering a large selection of the finest Brand new 
               and 1 year pre-owned vehicles.
             </p>
-            <Dialog>
+            <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
               <DialogTrigger asChild>
                 <Button variant="outline" size="lg" className="mt-4">
                   Read More
