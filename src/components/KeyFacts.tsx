@@ -38,7 +38,7 @@ export const KeyFacts = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="key-facts" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-background" />
       <div 
         ref={ref}
