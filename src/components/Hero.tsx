@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import heroPerson1 from "@/assets/hero-person-1.png";
-import heroPerson2 from "@/assets/hero-person-2.png";
-import heroPerson3 from "@/assets/hero-person-3.png";
+import heroCityscape1 from "@/assets/hero-cityscape-1.png";
+import heroCarNight from "@/assets/hero-car-night.png";
+import heroCarLights from "@/assets/hero-car-lights.png";
+import heroCityscape2 from "@/assets/hero-cityscape-2.png";
+import heroUrbanDrive from "@/assets/hero-urban-drive.png";
 import mbgLogo from "@/assets/mbg-logo-new.png";
 
-const heroImages = [heroPerson1, heroPerson2, heroPerson3];
+const heroImages = [heroCityscape1, heroCarNight, heroCarLights, heroCityscape2, heroUrbanDrive];
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
