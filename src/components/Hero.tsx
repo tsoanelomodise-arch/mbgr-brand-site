@@ -119,7 +119,7 @@ export const Hero = () => {
             />
           </div>
           
-          <p className="text-5xl md:text-7xl text-foreground font-bold drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] [text-shadow:_0_2px_8px_rgba(209,175,102,0.3)] tracking-wide">
+          <p className="text-5xl md:text-7xl text-foreground font-bold drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] [text-shadow:_0_2px_8px_rgba(255,255,255,0.5)] tracking-wide">
             Vehicle<br />
             Replacement<br />
             Specialists
