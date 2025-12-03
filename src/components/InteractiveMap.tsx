@@ -78,33 +78,6 @@ export const InteractiveMap = () => {
       const map = new google.maps.Map(mapRef.current, {
         center: { lat: -26, lng: 24 },
         zoom: 5,
-        styles: [
-          {
-            featureType: "all",
-            elementType: "geometry",
-            stylers: [{ color: "#D1AB66" }],
-          },
-          {
-            featureType: "water",
-            elementType: "geometry",
-            stylers: [{ color: "#a8926b" }],
-          },
-          {
-            featureType: "poi",
-            elementType: "labels",
-            stylers: [{ visibility: "off" }],
-          },
-          {
-            featureType: "road",
-            elementType: "geometry",
-            stylers: [{ color: "#e5d4a8" }],
-          },
-          {
-            featureType: "administrative",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#8a7543" }],
-          },
-        ],
       });
 
       googleMapRef.current = map;
