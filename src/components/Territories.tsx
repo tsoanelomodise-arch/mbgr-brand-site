@@ -91,11 +91,6 @@ export const Territories = () => {
           </div>
         </Card>
 
-        <div className="mt-8 text-center">
-          <p className="text-muted-foreground">
-            Contact us to learn more about our services in your region
-          </p>
-        </div>
       </div>
     </section>
   );
