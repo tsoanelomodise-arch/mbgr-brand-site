@@ -88,7 +88,7 @@ export const Footer = () => {
               A level 2 B-BBEE contributor entity with 125% procurement recognition
             </p>
             <p className="text-xs text-muted-foreground mt-3">
-              Website developed by{" "}
+              Powered by{" "}
               <a 
                 href="https://wonderlandstudio.co.za/" 
                 target="_blank" 
