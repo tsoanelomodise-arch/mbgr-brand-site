@@ -40,10 +40,10 @@ export const About = () => {
   ];
 
   const benefits = [
-    "Savings on replacements for insurance companies",
-    "Client retention",
-    "Peace of mind on getting into a new car",
-    "Shortfall saving"
+    "Continuation of existing vehicle finance agreement",
+    "Courtesy Car hire",
+    "Full franchise dealership after sales service",
+    "Delivery Nationwide"
   ];
 
   return (
@@ -122,7 +122,7 @@ export const About = () => {
             </Card>
 
             <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
-              <h3 className="text-2xl font-bold mb-6 text-primary">Vehicle Replacement Benefits</h3>
+              <h3 className="text-2xl font-bold mb-6 text-primary">Vehicle Replacement Benefit To Policy Holder</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
