@@ -61,7 +61,7 @@ export const Brands = () => {
   ];
 
   return (
-    <section id="brands" className="py-24 relative overflow-hidden">
+    <section id="brands" className="py-12 md:py-24 relative overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${portraitDuoYellow})` }}
@@ -97,12 +97,13 @@ export const Brands = () => {
             >
               <CarouselContent className="-ml-4">
                 {brands.map((brand, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/3 lg:basis-1/4">
-                    <div className="flex items-center justify-center p-6 rounded-lg bg-white hover:bg-secondary/50 transition-all hover:scale-105 border border-border hover:border-primary group h-32">
+                  <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                    <div className="flex items-center justify-center p-4 md:p-6 rounded-lg bg-white hover:bg-secondary/50 transition-all hover:scale-105 border border-border hover:border-primary group h-24 md:h-32">
                       <img 
                         src={brand.logo} 
-                        alt={`${brand.name} logo`}
-                        className="w-full h-auto max-w-[120px] max-h-[80px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                        alt={`${brand.name} vehicle replacement brand`}
+                        className="w-full h-auto max-w-[100px] md:max-w-[120px] max-h-[60px] md:max-h-[80px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                        loading="lazy"
                       />
                     </div>
                   </CarouselItem>

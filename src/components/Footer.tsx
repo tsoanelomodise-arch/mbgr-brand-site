@@ -3,7 +3,7 @@ import mbgLogo from "@/assets/mbg-logo-new.png";
 
 export const Footer = () => {
   return (
-    <footer className="py-12 bg-secondary border-t border-border">
+    <footer className="py-8 md:py-12 bg-secondary border-t border-border">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">

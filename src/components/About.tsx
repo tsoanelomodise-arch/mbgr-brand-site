@@ -47,7 +47,7 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-12 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-background" />
       <div
         ref={ref}

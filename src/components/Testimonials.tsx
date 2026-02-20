@@ -34,7 +34,7 @@ export const Testimonials = () => {
   const { ref, isVisible } = useIntersectionObserver();
 
   return (
-    <section id="testimonials" className="py-24 px-4 bg-secondary/30">
+    <section id="testimonials" className="py-12 md:py-24 px-4 bg-secondary/30">
       <div
         ref={ref}
         className={`max-w-7xl mx-auto transition-all duration-1000 ${
