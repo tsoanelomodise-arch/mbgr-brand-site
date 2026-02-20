@@ -27,6 +27,7 @@ export const Navbar = () => {
   };
 
   const navLinks = [
+    { label: "Testimonials", id: "testimonials" },
     { label: "Brands", id: "brands" },
     { label: "Contact", id: "contact" },
   ];
