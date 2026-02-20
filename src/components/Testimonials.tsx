@@ -8,7 +8,7 @@ const testimonials = [
     name: "Thabo Molefe",
     role: "Policy Holder, Johannesburg",
     initials: "TM",
-    avatar: "https://randomuser.me/api/portraits/men/81.jpg",
+    avatar: "https://randomuser.me/api/portraits/men/83.jpg",
     quote:
       "MBG made the entire vehicle replacement process seamless. Within days of my write-off, I had a brand-new like-for-like replacement delivered to my door.",
   },
