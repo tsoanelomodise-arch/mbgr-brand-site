@@ -53,11 +53,17 @@ export const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold">
               About <span className="text-primary">Us</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              My Brand Group, registered as MBG Africa Holdings, is a company specializing in the motor industry,
-              holding the position of a supplier and retailer, offering a large selection of the finest Brand new
-              and 1 year pre-owned vehicles.
-            </p>
+            <div className="max-w-4xl mx-auto space-y-4 text-lg text-muted-foreground">
+              <p>
+                My Brand Group (MBG Africa Holdings) is a specialized vehicle replacement company in the motor industry, providing fast, stress-free solutions for clients whose vehicles have been written off. We handle the entire process—from working with insurers to sourcing like-for-like replacements—ensuring client mobility with minimal disruption and maximum satisfaction.
+              </p>
+              <p>
+                Our team is committed to delivering a smooth, hassle-free experience for every client.
+              </p>
+              <p>
+                By offering this service, MBG helps insurers retain customers, reduce costs such as courtesy car hire, and maintain existing finance agreements. Our efficient, customer-focused approach strengthens relationships between insurers and their clients.
+              </p>
+            </div>
           </div>
 
           {/* Three content cards */}
