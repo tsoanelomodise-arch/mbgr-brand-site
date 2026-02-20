@@ -1,28 +1,47 @@
 
-# Redesign the "About Us" Section
 
-## Changes Overview
+# Add Client Testimonials Section
 
-1. **Rename heading** from "WHO ARE WE" to "About Us"
-2. **Remove the Dialog/Read More button** and display all content (Our Mission, Our Value Proposition, Why Choose Us) directly on the page
-3. **Redesign the layout** to present the expanded content in a clean, visually appealing way
+## Overview
 
-## Redesigned Layout
+Create a new "Client Testimonials" section with three testimonial cards featuring AI-generated client faces (round avatars), mock names, and quotes about the vehicle replacement experience. Add a corresponding navigation link in the Navbar.
 
-The section will flow as follows:
+## Section Design
 
-- **Section heading**: "About Us" with the gold accent bar
-- **Intro paragraph**: The existing MBG Africa Holdings description
-- **Three content cards in a grid**: Our Mission, Our Value Proposition, and Why Choose Us -- each displayed as a card with the gold CheckCircle icon, heading, and body text. On desktop these will show as a 3-column grid; on mobile they stack vertically.
-- **Tagline banner**: "This is My Brand Group" with subtitle, displayed inline below the cards
-- **Two-column cards**: The existing Industry Supply Spans and Vehicle Replacement Benefits cards remain unchanged
+The section will sit between Brands and Territories (or after Services), following the existing design language:
 
-## Technical Details
+- Gold accent bar + heading: "What Our Clients Say"
+- Three testimonial cards in a responsive grid (3 columns on desktop, stacked on mobile)
+- Each card features:
+  - Round avatar image (AI-generated face via placeholder service like `ui-avatars.com` or `randomuser.me` photos)
+  - Client name and a short role/context line (e.g., "Policy Holder, Johannesburg")
+  - Star rating (5 gold stars)
+  - Testimonial quote text
+- Cards use the same `Card` component with hover effects matching the rest of the site
 
-**File: `src/components/About.tsx`**
-- Remove Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, and Button imports (no longer needed)
-- Change the h2 from `WHO ARE <span>WE</span>` to `About <span>Us</span>`
-- Remove the Dialog block entirely (lines 47-115)
-- Add a 3-column responsive grid (`grid md:grid-cols-3 gap-6`) with Card components for each of the three content sections (Our Mission, Our Value Proposition, Why Choose Us)
-- Add the tagline "This is My Brand Group" as a centered text block below the cards
-- Keep the existing Industry Supply and Benefits cards as-is
+## Mock Testimonials
+
+1. **Thabo Molefe** - "MBG made the entire vehicle replacement process seamless. Within days of my write-off, I had a brand-new like-for-like replacement delivered to my door."
+2. **Sarah van der Merwe** - "I was dreading the insurance process, but MBG handled everything. The courtesy car kept me mobile, and my new vehicle arrived faster than I expected."
+3. **Nkosi Dlamini** - "Professional, efficient, and genuinely caring. MBG ensured my finance agreement continued smoothly and the delivery was flawless."
+
+## Avatar Images
+
+Will use `https://randomuser.me/api/portraits/` for realistic placeholder faces, or generate simple colored avatar circles with initials as fallback using the existing Avatar component.
+
+## Technical Changes
+
+### 1. New file: `src/components/Testimonials.tsx`
+- Create component following the same pattern as other sections (intersection observer for animation, Card components, gold accent styling)
+- Use Avatar component for round client photos
+- Include star ratings using lucide-react `Star` icon
+- Section id: `testimonials`
+
+### 2. Update: `src/components/Navbar.tsx`
+- Add "Testimonials" to the `navLinks` array: `{ label: "Testimonials", id: "testimonials" }`
+- Also add it to the mobile navigation menu
+
+### 3. Update: `src/pages/Index.tsx`
+- Import the new `Testimonials` component
+- Place it after `Services` and before `Brands` in the page layout
+
