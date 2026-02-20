@@ -1,24 +1,14 @@
 import { Card } from "@/components/ui/card";
-import { Building2, Globe2, Award, Car, Heart, Zap } from "lucide-react";
+import { Building2, Car, Heart, Zap } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 export const KeyFacts = () => {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
   const facts = [
     {
-      icon: Globe2,
-      title: "Global Agreements",
-      description: "In agreement with listed companies operating in over four continents"
-    },
-    {
       icon: Building2,
       title: "Strategic Partnership",
       description: "Partially owned by Digicall Solutions (at 26%)"
-    },
-    {
-      icon: Award,
-      title: "B-BBEE Level 2",
-      description: "Level 2 B-BBEE contributor entity with 125% procurement recognition"
     },
     {
       icon: Car,
@@ -59,7 +49,7 @@ export const KeyFacts = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {facts.map((fact, index) => {
               const Icon = fact.icon;
               return (
