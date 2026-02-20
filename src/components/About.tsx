@@ -20,12 +20,23 @@ export const About = () => {
     }
   ];
 
-  const industries = [
-    "Insurance industry supply",
-    "Retail market",
-    "Private Taxi industry",
-    "Funeral industry",
-    "Corporate entities and the likes"
+  const industryCategories = [
+    {
+      heading: "Industry Focus",
+      items: ["Insurance industry: Vehicle replacements on all write-off claims"]
+    },
+    {
+      heading: "Replacement Types",
+      items: ["Passenger Vehicles — Sedan, Hatchback and SUV"]
+    },
+    {
+      heading: "Motorcycles",
+      items: ["Motorbikes, Trailers"]
+    },
+    {
+      heading: "Commercial Vehicles",
+      items: ["Trucks, Farming Mobiles, Yellow Machines"]
+    }
   ];
 
   const benefits = [
@@ -93,14 +104,21 @@ export const About = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
               <h3 className="text-2xl font-bold mb-6 text-primary">Industry Supply Spans</h3>
-              <ul className="space-y-4">
-                {industries.map((industry, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground">{industry}</span>
-                  </li>
+              <div className="space-y-5">
+                {industryCategories.map((category, index) => (
+                  <div key={index}>
+                    <h4 className="text-sm font-semibold uppercase tracking-wider text-primary/80 mb-2">{category.heading}</h4>
+                    <ul className="space-y-2">
+                      {category.items.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </Card>
 
             <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
