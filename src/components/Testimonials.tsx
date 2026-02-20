@@ -21,9 +21,9 @@ const testimonials = [
       "I was dreading the insurance process, but MBG handled everything. The courtesy car kept me mobile, and my new vehicle arrived faster than I expected.",
   },
   {
-    name: "Nkosi Dlamini",
+    name: "Paul Hulley",
     role: "Policy Holder, Durban",
-    initials: "ND",
+    initials: "PH",
     avatar: "https://randomuser.me/api/portraits/men/78.jpg",
     quote:
       "Professional, efficient, and genuinely caring. MBG ensured my finance agreement continued smoothly and the delivery was flawless.",
