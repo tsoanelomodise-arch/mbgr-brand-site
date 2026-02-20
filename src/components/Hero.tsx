@@ -50,7 +50,7 @@ export const Hero = () => {
   const parallaxOffset = scrollY * 0.5;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-secondary/30 to-background">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-secondary/30 to-background">
       {/* Animated Background Images with Parallax */}
       <div className="absolute inset-0" style={{ transform: 'translateY(30px)' }}>
         {heroImages.map((image, index) => (
@@ -73,21 +73,21 @@ export const Hero = () => {
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-sm transition-all hover:scale-110"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-sm transition-all hover:scale-110"
         aria-label="Previous image"
       >
-        <ChevronLeft className="h-6 w-6 text-foreground" />
+        <ChevronLeft className="h-5 w-5 md:h-6 md:w-6 text-foreground" />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-sm transition-all hover:scale-110"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-sm transition-all hover:scale-110"
         aria-label="Next image"
       >
-        <ChevronRight className="h-6 w-6 text-foreground" />
+        <ChevronRight className="h-5 w-5 md:h-6 md:w-6 text-foreground" />
       </button>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {heroImages.map((_, index) => (
           <button
             key={index}
@@ -104,31 +104,32 @@ export const Hero = () => {
       
       {/* Content with enhanced parallax */}
       <div 
-        className="container relative z-10 px-4 py-12"
+        className="container relative z-10 px-4 py-8 md:py-12"
         style={{
           transform: `translateY(${parallaxOffset * -0.3}px)`,
           transition: "transform 0.1s ease-out",
         }}
       >
-        <div className="max-w-4xl mx-auto text-left space-y-6 animate-fade-in -mt-16">
-          <div className="mb-6">
+        <div className="max-w-4xl mx-auto text-left space-y-4 md:space-y-6 animate-fade-in -mt-8 md:-mt-16">
+          <div className="mb-4 md:mb-6">
             <img 
               src={mbgLogo} 
-              alt="MY BRAND GROUP" 
-              className="h-32 md:h-48 drop-shadow-2xl"
+              alt="MY BRAND GROUP - South Africa's leading vehicle replacement specialists" 
+              className="h-20 sm:h-28 md:h-48 drop-shadow-2xl"
+              loading="eager"
             />
           </div>
           
-          <p className="text-5xl md:text-7xl text-white font-bold drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] [text-shadow:_0_2px_8px_rgba(255,255,255,0.5)] tracking-wide">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white font-bold drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] [text-shadow:_0_2px_8px_rgba(255,255,255,0.5)] tracking-wide">
             Vehicle<br />
             Replacement<br />
             Specialists
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-start items-center pt-6">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-start items-stretch sm:items-center pt-4 md:pt-6">
             <Button 
               size="lg" 
-              className="group"
+              className="group text-base"
               onClick={() => scrollToSection("about")}
             >
               Discover More
@@ -137,6 +138,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
+              className="text-base"
               onClick={() => scrollToSection("contact")}
             >
               Get in Touch
@@ -145,7 +147,7 @@ export const Hero = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

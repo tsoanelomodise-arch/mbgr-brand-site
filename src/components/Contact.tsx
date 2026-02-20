@@ -38,7 +38,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-12 md:py-24 relative overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${portraitSunglassesRed})` }}
@@ -145,7 +145,7 @@ export const Contact = () => {
 
           {/* Google Map */}
           <Card className="p-4 bg-card border-border overflow-hidden mt-8">
-            <div className="w-full h-[400px] rounded-lg overflow-hidden">
+            <div className="w-full h-[250px] md:h-[400px] rounded-lg overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBok5Lep0qeiye47t2V0jB0ilOfFMDQODI&q=110+Conrad+Drive+Craighall+Park+Johannesburg&zoom=15&maptype=roadmap"
                 width="100%"

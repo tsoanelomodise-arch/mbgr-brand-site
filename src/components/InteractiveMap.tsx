@@ -119,7 +119,7 @@ export const InteractiveMap = () => {
   return (
     <div
       ref={mapRef}
-      className="w-full h-full min-h-[600px] rounded-lg"
+      className="w-full h-full min-h-[350px] md:min-h-[600px] rounded-lg"
       style={{ background: "#e5e3df" }}
     />
   );

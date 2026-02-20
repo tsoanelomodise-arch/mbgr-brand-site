@@ -25,7 +25,7 @@ export const Territories = () => {
   ];
 
   return (
-    <section id="territories" className="py-20 px-4 bg-gradient-to-b from-background to-secondary/30">
+    <section id="territories" className="py-12 md:py-20 px-4 bg-gradient-to-b from-background to-secondary/30">
       <div
         ref={ref}
         className={`max-w-7xl mx-auto transition-all duration-1000 ${
@@ -72,7 +72,7 @@ export const Territories = () => {
         </div>
 
         <Card className="overflow-hidden border-primary/20 shadow-lg">
-          <div className="relative w-full" style={{ height: "600px" }}>
+          <div className="relative w-full h-[350px] md:h-[600px]">
             <InteractiveMap />
           </div>
           
