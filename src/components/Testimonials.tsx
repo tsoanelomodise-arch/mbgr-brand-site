@@ -8,7 +8,7 @@ const testimonials = [
     name: "Thabo Molefe",
     role: "Policy Holder, Johannesburg",
     initials: "TM",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    avatar: "https://randomuser.me/api/portraits/men/81.jpg",
     quote:
       "MBG made the entire vehicle replacement process seamless. Within days of my write-off, I had a brand-new like-for-like replacement delivered to my door.",
   },
@@ -16,7 +16,7 @@ const testimonials = [
     name: "Sarah van der Merwe",
     role: "Policy Holder, Cape Town",
     initials: "SV",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    avatar: "https://randomuser.me/api/portraits/women/32.jpg",
     quote:
       "I was dreading the insurance process, but MBG handled everything. The courtesy car kept me mobile, and my new vehicle arrived faster than I expected.",
   },
@@ -24,7 +24,7 @@ const testimonials = [
     name: "Nkosi Dlamini",
     role: "Policy Holder, Durban",
     initials: "ND",
-    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+    avatar: "https://randomuser.me/api/portraits/men/78.jpg",
     quote:
       "Professional, efficient, and genuinely caring. MBG ensured my finance agreement continued smoothly and the delivery was flawless.",
   },
