@@ -1,15 +1,10 @@
 import { Card } from "@/components/ui/card";
-import { CreditCard, Car, Truck } from "lucide-react";
+import { Car, Truck } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 export const Services = () => {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
   const services = [
-    {
-      icon: CreditCard,
-      title: "Vehicle Asset Finance",
-      description: "Vehicle Finance facilities are available with qualified F & I Managers to help you secure the perfect financing solution for your needs."
-    },
     {
       icon: Car,
       title: "Replacement Courtesy Car",
@@ -44,7 +39,7 @@ export const Services = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
