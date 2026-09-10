@@ -156,7 +156,7 @@ export const Hero = () => {
           transition: "transform 0.1s ease-out",
         }}
       >
-        <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6 animate-fade-in -mt-8 md:-mt-16">
+        <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6 animate-fade-in mt-32 md:mt-48">
           
 
           
