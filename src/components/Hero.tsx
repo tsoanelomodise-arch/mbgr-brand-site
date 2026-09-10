@@ -149,16 +149,27 @@ export const Hero = () => {
             <img 
               src={mbgLogo} 
               alt="MY BRAND GROUP - South Africa's leading vehicle replacement specialists" 
-              className="h-20 sm:h-28 md:h-48 drop-shadow-2xl"
+              className="h-10 sm:h-14 md:h-24 drop-shadow-2xl"
               loading="eager"
             />
           </div>
           
-          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white font-bold tracking-tight leading-[1.05] drop-shadow-[0_2px_24px_rgba(0,0,0,0.65)]">
-            Vehicle<br />
-            Replacement<br />
-            Specialists
-          </p>
+          <div
+            className={`space-y-4 md:space-y-6 transition-opacity duration-1000 ${
+              isShuffling ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-light tracking-tight leading-[1.1] drop-shadow-[0_2px_24px_rgba(0,0,0,0.65)]">
+              Your partner in vehicle replacement services.
+            </p>
+            <div className="flex items-stretch gap-4 md:gap-6">
+              <span className="w-[3px] md:w-1 bg-primary shrink-0" aria-hidden="true" />
+              <p className="text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold tracking-tight leading-[1.1] drop-shadow-[0_2px_24px_rgba(0,0,0,0.65)]">
+                We keep you in motion.
+              </p>
+            </div>
+          </div>
+
           
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-start items-stretch sm:items-center pt-4 md:pt-6">
             <Button 
