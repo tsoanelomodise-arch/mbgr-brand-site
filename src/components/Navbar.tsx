@@ -49,20 +49,31 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                onClick={() => scrollToSection("about")}
-                className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1"
+            <div className="inline-flex items-center gap-1">
+              <a
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("about");
+                }}
+                className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 About Us
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => scrollToSection("key-facts")}>
-                  Key Facts
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+              </a>
+              <DropdownMenu>
+                <DropdownMenuTrigger
+                  aria-label="About Us menu"
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  <ChevronDown className="h-4 w-4" />
+                </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem onClick={() => scrollToSection("key-facts")}>
+                      Key Facts
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
             <DropdownMenu>
               <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1">
                 Services
