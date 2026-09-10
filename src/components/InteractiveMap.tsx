@@ -6,8 +6,6 @@ declare global {
     google: any;
   }
 }
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const google: any = (window as any).google;
 
 interface Office {
@@ -58,7 +56,7 @@ const offices: Office[] = [
 
 export const InteractiveMap = () => {
   const mapRef = useRef<HTMLDivElement>(null);
-  const googleMapRef = useRef<google.maps.Map | null>(null);
+  const googleMapRef = useRef<any>(null);
 
   useEffect(() => {
     const loadGoogleMaps = () => {
@@ -79,7 +77,7 @@ export const InteractiveMap = () => {
       if (!mapRef.current) return;
 
       // Create map centered on Southern Africa
-      const map = new google.maps.Map(mapRef.current, {
+      const map = new window.google.maps.Map(mapRef.current, {
         center: { lat: -26, lng: 24 },
         zoom: 5,
       });
@@ -88,14 +86,14 @@ export const InteractiveMap = () => {
 
       // Add markers for each office
       offices.forEach((office) => {
-        const marker = new google.maps.Marker({
+        const marker = new window.google.maps.Marker({
           position: office.position,
           map: map,
           title: office.name,
-          animation: google.maps.Animation.DROP,
+          animation: window.google.maps.Animation.DROP,
         });
 
-        const infoWindow = new google.maps.InfoWindow({
+        const infoWindow = new window.google.maps.InfoWindow({
           content: `
             <div style="padding: 12px; font-family: system-ui; max-width: 250px;">
               <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: 600; color: #1a1a1a;">
