@@ -84,9 +84,6 @@ export const Footer = () => {
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} My Brand Group. All rights reserved.
             </p>
-            <p className="text-xs text-muted-foreground mt-2">
-              A level 2 B-BBEE contributor entity with 125% procurement recognition
-            </p>
             <p className="text-xs text-muted-foreground mt-3">
               Powered by{" "}
               <a 
