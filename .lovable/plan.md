@@ -1,47 +1,22 @@
+# Design break banner after Our Services
 
+Add a full-width visual banner between the Our Services section and Brands. No navigation item.
 
-# Add Client Testimonials Section
+## What it looks like
 
-## Overview
+- Full-bleed image of the woman in the pastel motion-blur crowd, cropped wide (short on mobile, taller on desktop).
+- Bottom-left overlay text: **Replace. Reconnect. Keep Moving.** in bold white, with a thin gold vertical bar to its left.
+- Soft dark gradient at the bottom of the image so the wording stays readable.
+- Space reserved top-right for the round logo you will send later (left empty for now).
+- Same scroll fade-in used by other sections.
 
-Create a new "Client Testimonials" section with three testimonial cards featuring AI-generated client faces (round avatars), mock names, and quotes about the vehicle replacement experience. Add a corresponding navigation link in the Navbar.
+## Content
 
-## Section Design
+Exact wording: `Replace. Reconnect. Keep Moving.`
 
-The section will sit between Brands and Territories (or after Services), following the existing design language:
+## Technical notes
 
-- Gold accent bar + heading: "What Our Clients Say"
-- Three testimonial cards in a responsive grid (3 columns on desktop, stacked on mobile)
-- Each card features:
-  - Round avatar image (AI-generated face via placeholder service like `ui-avatars.com` or `randomuser.me` photos)
-  - Client name and a short role/context line (e.g., "Policy Holder, Johannesburg")
-  - Star rating (5 gold stars)
-  - Testimonial quote text
-- Cards use the same `Card` component with hover effects matching the rest of the site
-
-## Mock Testimonials
-
-1. **Thabo Molefe** - "MBG made the entire vehicle replacement process seamless. Within days of my write-off, I had a brand-new like-for-like replacement delivered to my door."
-2. **Sarah van der Merwe** - "I was dreading the insurance process, but MBG handled everything. The courtesy car kept me mobile, and my new vehicle arrived faster than I expected."
-3. **Nkosi Dlamini** - "Professional, efficient, and genuinely caring. MBG ensured my finance agreement continued smoothly and the delivery was flawless."
-
-## Avatar Images
-
-Will use `https://randomuser.me/api/portraits/` for realistic placeholder faces, or generate simple colored avatar circles with initials as fallback using the existing Avatar component.
-
-## Technical Changes
-
-### 1. New file: `src/components/Testimonials.tsx`
-- Create component following the same pattern as other sections (intersection observer for animation, Card components, gold accent styling)
-- Use Avatar component for round client photos
-- Include star ratings using lucide-react `Star` icon
-- Section id: `testimonials`
-
-### 2. Update: `src/components/Navbar.tsx`
-- Add "Testimonials" to the `navLinks` array: `{ label: "Testimonials", id: "testimonials" }`
-- Also add it to the mobile navigation menu
-
-### 3. Update: `src/pages/Index.tsx`
-- Import the new `Testimonials` component
-- Place it after `Services` and before `Brands` in the page layout
-
+- New `src/components/Banner.tsx`, rendered in `src/pages/Index.tsx` after `<Services />`.
+- Image: upload `BannerLady.png` via `lovable-assets` and import the pointer JSON; no image cropping or regeneration.
+- Styling with existing tokens: white text, gold bar using the brand gold, bottom `bg-gradient-to-t from-black/60`, responsive heights (`h-[320px] md:h-[520px]`), `object-cover`.
+- No changes to Navbar, other sections, or any logic.
