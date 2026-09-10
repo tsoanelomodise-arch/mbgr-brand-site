@@ -135,7 +135,19 @@ export const Hero = () => {
           />
         ))}
       </div>
-      
+
+      {/* Hero logo aligned with the header row */}
+      <div className="absolute top-0 left-0 right-0 z-20 container mx-auto px-4">
+        <div className="flex items-center h-16 md:h-20">
+          <img
+            src={mbgLogo}
+            alt="MY BRAND GROUP - South Africa's leading vehicle replacement specialists"
+            className="h-10 sm:h-12 md:h-14 drop-shadow-2xl"
+            loading="eager"
+          />
+        </div>
+      </div>
+
       {/* Content with enhanced parallax */}
       <div 
         className="container relative z-10 px-4 py-8 md:py-12"
@@ -145,14 +157,8 @@ export const Hero = () => {
         }}
       >
         <div className="max-w-4xl mx-auto text-left space-y-4 md:space-y-6 animate-fade-in -mt-8 md:-mt-16">
-          <div className="mb-4 md:mb-6">
-            <img 
-              src={mbgLogo} 
-              alt="MY BRAND GROUP - South Africa's leading vehicle replacement specialists" 
-              className="h-10 sm:h-14 md:h-24 drop-shadow-2xl"
-              loading="eager"
-            />
-          </div>
+          
+
           
           <div className="space-y-4 md:space-y-6">
             <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-light tracking-tight leading-[1.1] drop-shadow-[0_2px_24px_rgba(0,0,0,0.65)]">
