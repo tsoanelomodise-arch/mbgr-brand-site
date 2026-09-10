@@ -67,12 +67,13 @@ export const Navbar = () => {
                 >
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => scrollToSection("key-facts")}>
-                  Key Facts
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem onClick={() => scrollToSection("key-facts")}>
+                      Key Facts
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
             <DropdownMenu>
               <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1">
                 Services
