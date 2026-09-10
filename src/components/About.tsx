@@ -37,7 +37,7 @@ export const About = () => {
 
   const benefits = [
     "Continuation of existing vehicle finance agreement",
-    "Courtesy Car hire",
+    "Courtesy car hire",
     "Full franchise dealership after sales service",
     "Delivery Nationwide"
   ];
