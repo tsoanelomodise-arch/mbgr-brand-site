@@ -36,7 +36,7 @@ export const Services = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
