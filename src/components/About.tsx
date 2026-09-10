@@ -27,15 +27,11 @@ export const About = () => {
     },
     {
       heading: "Replacement Types",
-      items: ["Passenger Vehicles — Sedan, Hatchback and SUV"]
-    },
-    {
-      heading: "Motorcycles",
-      items: ["Motorbikes, Trailers"]
-    },
-    {
-      heading: "Commercial Vehicles",
-      items: ["Trucks, Farming Mobiles, Yellow Machines"]
+      items: [
+        "Passenger Vehicles (Sedan, Hatchback and SU)",
+        "Motorcycles (Motorbikes, Trailers)",
+        "Commercial Vehicles (Trucks, Farming Mobiles, Yellow Machines)"
+      ]
     }
   ];
 
