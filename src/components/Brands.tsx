@@ -101,6 +101,7 @@ export const Brands = () => {
                         alt={`${brand.name} vehicle replacement brand`}
                         className="w-full h-auto max-w-[100px] md:max-w-[120px] max-h-[60px] md:max-h-[80px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                         loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </CarouselItem>
