@@ -9,7 +9,7 @@ export const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Brand */}
             <div>
-              <img src={mbgLogo} alt="MBG Logo" className="h-12 mb-4" />
+              <img src={mbgLogo} alt="My Brand Group logo" className="h-12 mb-4" loading="lazy" decoding="async" />
               <p className="text-sm text-white/70">
                 Specializing in the motor industry with exceptional customer service throughout the replacement journey.
               </p>
