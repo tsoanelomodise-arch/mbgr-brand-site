@@ -89,13 +89,13 @@ export const Hero = () => {
         {heroImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full bg-cover bg-center bg-no-repeat transition-opacity duration-2000 ${
+            className={`absolute inset-0 w-full bg-cover bg-center bg-no-repeat ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
             style={{
               backgroundImage: `url(${image})`,
               transform: `translateY(${parallaxOffset}px)`,
-              transition: "transform 0.1s ease-out",
+              transition: `transform 0.1s ease-out, opacity ${isShuffling ? "0.1s" : "2s"} ease-in-out`,
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
