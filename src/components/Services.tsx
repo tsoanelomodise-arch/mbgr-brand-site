@@ -19,7 +19,7 @@ export const Services = () => {
 
   return (
     <section id="services" className="py-12 md:py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-background" />
+      <div className="absolute inset-0 bg-[#54555B]" />
       <div 
         ref={ref}
         className={`container mx-auto px-4 relative z-10 transition-all duration-1000 ${
@@ -31,7 +31,7 @@ export const Services = () => {
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-primary">
               OUR <span className="text-primary">SERVICES</span>
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground max-w-3xl">
+            <p className="text-base md:text-lg text-white/80 max-w-3xl">
               Exceptional customer service throughout the replacement journey
             </p>
           </div>
