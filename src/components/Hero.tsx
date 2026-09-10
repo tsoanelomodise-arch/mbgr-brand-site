@@ -138,11 +138,11 @@ export const Hero = () => {
 
       {/* Hero logo aligned with the header row */}
       <div className="absolute top-0 left-0 right-0 z-20 container mx-auto px-4">
-        <div className="max-w-4xl mx-auto flex items-center h-16 md:h-20">
+        <div className="max-w-4xl mx-auto flex items-center h-16 md:h-20 pt-6 md:pt-8">
           <img
             src={mbgLogo}
             alt="MY BRAND GROUP - South Africa's leading vehicle replacement specialists"
-            className="h-10 sm:h-12 md:h-14 drop-shadow-2xl"
+            className="h-14 sm:h-16 md:h-20 drop-shadow-2xl"
             loading="eager"
           />
         </div>
