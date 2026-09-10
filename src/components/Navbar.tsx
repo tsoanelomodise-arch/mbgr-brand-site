@@ -217,7 +217,7 @@ export const Navbar = () => {
                 <div className="pl-4 space-y-2">
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="block rounded-full px-3 py-1.5 text-left text-sm text-muted-foreground transition-colors hover:text-primary"
+                    className={mobileSubClass(activeSection === "services")}
                   >
                     Our Services
                   </button>
