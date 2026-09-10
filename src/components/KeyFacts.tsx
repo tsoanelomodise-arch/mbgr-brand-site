@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Building2, Car, Heart, Zap } from "lucide-react";
+import { Building2, Car, Handshake, Heart, Zap } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 export const KeyFacts = () => {
@@ -24,6 +24,11 @@ export const KeyFacts = () => {
       icon: Zap,
       title: "Innovation First",
       description: "Going the extra mile with innovation at our core"
+    },
+    {
+      icon: Handshake,
+      title: "Agreements with current insurers",
+      description: "Established agreements in place with leading insurers"
     }
   ];
 
