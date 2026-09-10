@@ -2,9 +2,13 @@ import { useEffect, useRef } from "react";
 
 declare global {
   interface Window {
-    google: typeof google;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    google: any;
   }
 }
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const google: any = (window as any).google;
 
 interface Office {
   name: string;
