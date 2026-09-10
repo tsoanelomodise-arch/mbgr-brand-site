@@ -50,7 +50,7 @@ export const Hero = () => {
         clearInterval(interval);
         setIsShuffling(false);
       }
-    }, 120);
+    }, 260);
 
     return () => clearInterval(interval);
   }, []);
@@ -95,7 +95,7 @@ export const Hero = () => {
             style={{
               backgroundImage: `url(${image})`,
               transform: `translateY(${parallaxOffset}px)`,
-              transition: `transform 0.1s ease-out, opacity ${isShuffling ? "0.1s" : "2s"} ease-in-out`,
+              transition: `transform 0.1s ease-out, opacity ${isShuffling ? "0.25s" : "2s"} ease-in-out`,
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
