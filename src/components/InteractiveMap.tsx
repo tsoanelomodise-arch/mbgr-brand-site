@@ -6,7 +6,6 @@ declare global {
     google: any;
   }
 }
-const google: any = (window as any).google;
 
 interface Office {
   name: string;
