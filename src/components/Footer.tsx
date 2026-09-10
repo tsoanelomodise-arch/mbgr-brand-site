@@ -55,7 +55,7 @@ export const Footer = () => {
                   href="https://facebook.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-11 h-11 sm:w-9 sm:h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Facebook className="h-4 w-4" />
                 </a>
@@ -63,7 +63,7 @@ export const Footer = () => {
                   href="https://linkedin.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-11 h-11 sm:w-9 sm:h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
@@ -71,7 +71,7 @@ export const Footer = () => {
                   href="https://twitter.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-11 h-11 sm:w-9 sm:h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Twitter className="h-4 w-4" />
                 </a>
@@ -79,7 +79,7 @@ export const Footer = () => {
                   href="https://instagram.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-11 h-11 sm:w-9 sm:h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Instagram className="h-4 w-4" />
                 </a>
