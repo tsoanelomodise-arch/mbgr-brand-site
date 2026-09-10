@@ -17,6 +17,6 @@ Exact wording: `Replace. Reconnect. Keep Moving.`
 ## Technical notes
 
 - New `src/components/Banner.tsx`, rendered in `src/pages/Index.tsx` after `<Services />`.
-- Image: upload `BannerLady.png` via `lovable-assets` and import the pointer JSON; no image cropping or regeneration.
+- Image: reuse the already uploaded hero image `AdobeStock_1771150921_Optimized.jpg`; no cropping or regeneration.
 - Styling with existing tokens: white text, gold bar using the brand gold, bottom `bg-gradient-to-t from-black/60`, responsive heights (`h-[320px] md:h-[520px]`), `object-cover`.
 - No changes to Navbar, other sections, or any logic.
