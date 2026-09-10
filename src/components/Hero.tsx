@@ -6,13 +6,29 @@ import hero2 from "@/assets/AdobeStock_1942224915_Optimised.jpg.asset.json";
 import hero3 from "@/assets/AdobeStock_1771150921_Optimized.jpg.asset.json";
 import hero4 from "@/assets/AdobeStock_1628191511_Optimised.jpg.asset.json";
 import hero5 from "@/assets/AdobeStock_1618442063_Optimised.jpg.asset.json";
+import hero6 from "@/assets/AdobeStock_1579748279.jpeg.asset.json";
+import hero7 from "@/assets/AdobeStock_1579748297_Optimised.jpg.asset.json";
+import hero8 from "@/assets/AdobeStock_1618441962_Optimised.jpg.asset.json";
+import hero9 from "@/assets/AdobeStock_1628191496_Optimised.jpg.asset.json";
 import mbgLogo from "@/assets/mbg-logo-new.png";
 
-const heroImages = [hero1.url, hero2.url, hero3.url, hero4.url, hero5.url];
+const heroImages = [
+  hero1.url,
+  hero2.url,
+  hero3.url,
+  hero4.url,
+  hero5.url,
+  hero6.url,
+  hero7.url,
+  hero8.url,
+  hero9.url,
+];
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [scrollY, setScrollY] = useState(0);
+  const [isShuffling, setIsShuffling] = useState(true);
+
 
   useEffect(() => {
     const handleScroll = () => {
