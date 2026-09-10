@@ -52,16 +52,16 @@ export const Hero = () => {
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-background">
       {/* Animated Background Images with Parallax */}
-      <div className="absolute inset-x-0 -top-24 -bottom-24">
+      <div className="absolute inset-x-0 -top-24 -bottom-24 overflow-hidden">
         {heroImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-2000 ${
+            className={`absolute inset-0 w-full bg-cover bg-center bg-no-repeat transition-opacity duration-2000 ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
             style={{
               backgroundImage: `url(${image})`,
-              transform: `translateY(${parallaxOffset}px) ${index === 0 ? 'translateY(50px)' : index === 1 ? 'translateX(35px) translateY(50px)' : index === 2 ? 'translateY(15px)' : ''}`,
+              transform: `translateY(${parallaxOffset}px)`,
               transition: "transform 0.1s ease-out",
             }}
           >
