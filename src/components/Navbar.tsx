@@ -50,14 +50,14 @@ export const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1">
+              <DropdownMenuTrigger
+                onClick={() => scrollToSection("about")}
+                className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1"
+              >
                 About Us
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => scrollToSection("about")}>
-                  About Us
-                </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => scrollToSection("key-facts")}>
                   Key Facts
                 </DropdownMenuItem>
@@ -107,14 +107,13 @@ export const Navbar = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               <div className="space-y-2">
-                <div className="font-medium text-foreground">About Us</div>
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="font-medium text-foreground hover:text-primary transition-colors text-left block"
+                >
+                  About Us
+                </button>
                 <div className="pl-4 space-y-2">
-                  <button
-                    onClick={() => scrollToSection("about")}
-                    className="text-foreground hover:text-primary transition-colors text-left block"
-                  >
-                    About Us
-                  </button>
                   <button
                     onClick={() => scrollToSection("key-facts")}
                     className="text-foreground hover:text-primary transition-colors text-left block"
