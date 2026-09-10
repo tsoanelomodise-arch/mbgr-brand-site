@@ -173,7 +173,7 @@ export const Hero = () => {
           </div>
 
           
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-start items-stretch sm:items-center pt-4 md:pt-6">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-stretch sm:items-center pt-4 md:pt-6">
             <Button 
               size="lg" 
               className="group text-base"
