@@ -164,7 +164,7 @@ export const Hero = () => {
             <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-light tracking-tight leading-[1.1] drop-shadow-[0_2px_24px_rgba(0,0,0,0.65)]">
               Your partner in vehicle replacement services.
             </p>
-            <div className="flex items-stretch gap-4 md:gap-6">
+            <div className="flex items-stretch justify-center gap-4 md:gap-6">
               <span className="w-[3px] md:w-1 bg-primary shrink-0" aria-hidden="true" />
               <p className="text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold tracking-tight leading-[1.1] drop-shadow-[0_2px_24px_rgba(0,0,0,0.65)]">
                 We keep you in motion.
