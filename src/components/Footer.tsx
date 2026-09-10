@@ -31,6 +31,14 @@ export const Footer = () => {
                 <a href="#contact" className="block text-sm text-white/70 hover:text-primary transition-colors">
                   Contact
                 </a>
+                <a
+                  href="https://www.digicallgroup.co.za/wp-content/uploads/2025/10/C-04_Digicall_PAIA-MANUAL_2025.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm text-white/70 hover:text-primary transition-colors"
+                >
+                  PAIA Manual
+                </a>
               </div>
             </div>
 
