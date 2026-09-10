@@ -61,7 +61,7 @@ export const Testimonials = () => {
 
               <div className="flex flex-col items-center text-center gap-4">
                 <Avatar className="h-20 w-20 ring-2 ring-primary ring-offset-2 ring-offset-card">
-                  <AvatarImage src={t.avatar} alt={t.name} />
+                  <AvatarImage src={t.avatar} alt={t.name} loading="lazy" decoding="async" />
                   <AvatarFallback className="bg-primary text-primary-foreground text-lg font-bold">
                     {t.initials}
                   </AvatarFallback>

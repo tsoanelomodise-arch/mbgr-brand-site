@@ -32,8 +32,19 @@ export const Hero = () => {
 
 
   useEffect(() => {
+    // Skip parallax work on small screens / reduced-motion for smoother scrolling
+    const isSmall = window.matchMedia("(max-width: 767px)").matches;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (isSmall || reduced) return;
+
+    let ticking = false;
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+        ticking = false;
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -107,32 +118,37 @@ export const Hero = () => {
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
-        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm transition-all hover:scale-110"
+        className="absolute left-1 md:left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm transition-all hover:scale-110"
         aria-label="Previous image"
       >
         <ChevronLeft className="h-5 w-5 md:h-6 md:w-6 text-white" />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm transition-all hover:scale-110"
+        className="absolute right-1 md:right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm transition-all hover:scale-110"
         aria-label="Next image"
       >
         <ChevronRight className="h-5 w-5 md:h-6 md:w-6 text-white" />
       </button>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1 md:gap-2">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => goToImage(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentImageIndex
-                ? "bg-primary w-8"
-                : "bg-white/50 hover:bg-white/70"
-            }`}
+            className="p-2 md:p-2.5 -m-0.5 flex items-center justify-center"
             aria-label={`Go to image ${index + 1}`}
-          />
+            aria-current={index === currentImageIndex}
+          >
+            <span
+              className={`block h-2.5 w-2.5 md:h-3 md:w-3 rounded-full transition-all ${
+                index === currentImageIndex
+                  ? "bg-primary w-6 md:w-8"
+                  : "bg-white/50 hover:bg-white/70"
+              }`}
+            />
+          </button>
         ))}
       </div>
 
@@ -150,7 +166,7 @@ export const Hero = () => {
 
       {/* Content with enhanced parallax */}
       <div 
-        className="container relative z-10 px-4 py-8 md:py-12"
+        className="container relative z-10 px-10 sm:px-6 md:px-4 py-8 md:py-12"
         style={{
           transform: `translateY(${parallaxOffset * -0.3}px)`,
           transition: "transform 0.1s ease-out",
