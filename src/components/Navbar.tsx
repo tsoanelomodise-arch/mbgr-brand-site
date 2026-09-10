@@ -166,7 +166,7 @@ export const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="rounded-full px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className={linkClass(activeSection === link.id)}
               >
                 {link.label}
               </button>
