@@ -35,7 +35,7 @@ export const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-white/60 backdrop-blur-sm"
+        isScrolled ? "bg-card/95 backdrop-blur-md shadow-widget" : "bg-card/70 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -48,7 +48,7 @@ export const Navbar = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-2 lg:gap-4">
             <div className="inline-flex items-center gap-1">
               <a
                 href="#about"
@@ -56,14 +56,14 @@ export const Navbar = () => {
                   e.preventDefault();
                   scrollToSection("about");
                 }}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="rounded-full px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
               >
                 About Us
               </a>
               <DropdownMenu>
                 <DropdownMenuTrigger
                   aria-label="About Us menu"
-                  className="text-foreground hover:text-primary transition-colors"
+                  className="rounded-full p-1 text-foreground transition-colors hover:text-primary"
                 >
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
@@ -81,14 +81,14 @@ export const Navbar = () => {
                   e.preventDefault();
                   scrollToSection("services");
                 }}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="rounded-full px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
               >
                 Services
               </a>
               <DropdownMenu>
                 <DropdownMenuTrigger
                   aria-label="Services menu"
-                  className="text-foreground hover:text-primary transition-colors"
+                  className="rounded-full p-1 text-foreground transition-colors hover:text-primary"
                 >
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
@@ -106,12 +106,12 @@ export const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="rounded-full px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
               >
                 {link.label}
               </button>
             ))}
-            <Button onClick={() => {}} className="ml-4">
+            <Button onClick={() => {}} className="ml-2">
               Login
             </Button>
           </div>
@@ -134,14 +134,14 @@ export const Navbar = () => {
               <div className="space-y-2">
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="font-medium text-foreground hover:text-primary transition-colors text-left block"
+                  className="block rounded-full px-3 py-2 text-left font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
                 >
                   About Us
                 </button>
                 <div className="pl-4 space-y-2">
                   <button
                     onClick={() => scrollToSection("key-facts")}
-                    className="text-foreground hover:text-primary transition-colors text-left block"
+                    className="block rounded-full px-3 py-1.5 text-left text-sm text-muted-foreground transition-colors hover:text-primary"
                   >
                     Key Facts
                   </button>
@@ -150,20 +150,20 @@ export const Navbar = () => {
               <div className="space-y-2">
                 <button
                   onClick={() => scrollToSection("services")}
-                  className="font-medium text-foreground hover:text-primary transition-colors text-left block"
+                  className="block rounded-full px-3 py-2 text-left font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
                 >
                   Services
                 </button>
                 <div className="pl-4 space-y-2">
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="text-foreground hover:text-primary transition-colors text-left block"
+                    className="block rounded-full px-3 py-1.5 text-left text-sm text-muted-foreground transition-colors hover:text-primary"
                   >
                     Our Services
                   </button>
                   <button
                     onClick={() => scrollToSection("territories")}
-                    className="text-foreground hover:text-primary transition-colors text-left block"
+                    className="block rounded-full px-3 py-1.5 text-left text-sm text-muted-foreground transition-colors hover:text-primary"
                   >
                     Territories
                   </button>
@@ -173,7 +173,7 @@ export const Navbar = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                  className="block rounded-full px-3 py-2 text-left font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
                 >
                   {link.label}
                 </button>
