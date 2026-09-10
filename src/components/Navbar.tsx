@@ -116,7 +116,7 @@ export const Navbar = () => {
                   e.preventDefault();
                   scrollToSection("about");
                 }}
-                className="rounded-full px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className={linkClass(aboutActive)}
               >
                 About Us
               </a>
