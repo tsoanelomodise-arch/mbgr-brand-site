@@ -50,14 +50,14 @@ export const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1">
+              <DropdownMenuTrigger
+                onClick={() => scrollToSection("about")}
+                className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1"
+              >
                 About Us
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => scrollToSection("about")}>
-                  About Us
-                </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => scrollToSection("key-facts")}>
                   Key Facts
                 </DropdownMenuItem>
