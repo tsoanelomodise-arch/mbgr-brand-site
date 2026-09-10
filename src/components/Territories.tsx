@@ -25,19 +25,18 @@ export const Territories = () => {
   ];
 
   return (
-    <section id="territories" className="py-12 md:py-20 px-4 bg-gradient-to-b from-background to-secondary/30">
+    <section id="territories" className="py-16 md:py-24 px-4 bg-background">
       <div
         ref={ref}
         className={`max-w-7xl mx-auto transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+        <div className="mb-12 space-y-3">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-primary">
             TERRITORIES WE COVER
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl">
             Our extensive network spans across Southern Africa, providing comprehensive automotive solutions
             across South Africa, Namibia, and Botswana.
           </p>
@@ -47,21 +46,18 @@ export const Territories = () => {
           {territories.map((territory, index) => (
             <Card
               key={territory.name}
-              className="p-6 hover:shadow-xl transition-all duration-300 border-2"
-              style={{
-                borderColor: territory.color,
-                animationDelay: `${index * 150}ms`,
-              }}
+              className="p-7 bg-card rounded-2xl shadow-widget hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border/70"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="flex items-start gap-4">
                 <div
-                  className="p-3 rounded-lg"
+                  className="p-3 rounded-2xl"
                   style={{ backgroundColor: territory.color }}
                 >
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold mb-2 text-foreground">{territory.name}</h3>
+                  <h3 className="text-lg md:text-xl font-bold tracking-tight mb-2 text-foreground">{territory.name}</h3>
                   <p className="text-muted-foreground">
                     {territory.provinces?.[0] || territory.coverage}
                   </p>
@@ -71,7 +67,7 @@ export const Territories = () => {
           ))}
         </div>
 
-        <Card className="overflow-hidden border-primary/20 shadow-lg">
+        <Card className="overflow-hidden rounded-3xl border-border/70 shadow-widget">
           <div className="relative w-full h-[350px] md:h-[600px]">
             <InteractiveMap />
           </div>

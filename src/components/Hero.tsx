@@ -50,7 +50,7 @@ export const Hero = () => {
   const parallaxOffset = scrollY * 0.5;
 
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-secondary/30 to-background">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-background">
       {/* Animated Background Images with Parallax */}
       <div className="absolute inset-0" style={{ transform: 'translateY(30px)' }}>
         {heroImages.map((image, index) => (
@@ -65,7 +65,7 @@ export const Hero = () => {
               transition: "transform 0.1s ease-out",
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
           </div>
         ))}
       </div>
@@ -73,17 +73,17 @@ export const Hero = () => {
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
-        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-sm transition-all hover:scale-110"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm transition-all hover:scale-110"
         aria-label="Previous image"
       >
-        <ChevronLeft className="h-5 w-5 md:h-6 md:w-6 text-foreground" />
+        <ChevronLeft className="h-5 w-5 md:h-6 md:w-6 text-white" />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-sm transition-all hover:scale-110"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm transition-all hover:scale-110"
         aria-label="Next image"
       >
-        <ChevronRight className="h-5 w-5 md:h-6 md:w-6 text-foreground" />
+        <ChevronRight className="h-5 w-5 md:h-6 md:w-6 text-white" />
       </button>
 
       {/* Dot Indicators */}
@@ -95,7 +95,7 @@ export const Hero = () => {
             className={`w-3 h-3 rounded-full transition-all ${
               index === currentImageIndex
                 ? "bg-primary w-8"
-                : "bg-background/40 hover:bg-background/60"
+                : "bg-white/50 hover:bg-white/70"
             }`}
             aria-label={`Go to image ${index + 1}`}
           />
@@ -120,7 +120,7 @@ export const Hero = () => {
             />
           </div>
           
-          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white font-bold drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] [text-shadow:_0_2px_8px_rgba(255,255,255,0.5)] tracking-wide">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white font-bold tracking-tight leading-[1.05] drop-shadow-[0_2px_24px_rgba(0,0,0,0.65)]">
             Vehicle<br />
             Replacement<br />
             Specialists
@@ -138,7 +138,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="text-base"
+              className="text-base bg-white/90 backdrop-blur-sm"
               onClick={() => scrollToSection("contact")}
             >
               Get in Touch

@@ -8,45 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* MBG Brand Colors - Light Grey Theme */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 15%;
+    /* MBG CI — monochrome canvas + gold accent */
+    --background: 240 6% 97%;
+    --foreground: 228 4% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 228 4% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 228 4% 25%;
 
-    --primary: 41 54% 61%;
+    --primary: 38 52% 61%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 93%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 240 5% 94%;
+    --secondary-foreground: 228 4% 25%;
 
-    --muted: 0 0% 93%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 240 5% 94%;
+    --muted-foreground: 240 3% 52%;
 
-    --accent: 41 54% 61%;
+    --accent: 38 52% 61%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 41 54% 61%;
+    --border: 240 5% 90%;
+    --input: 240 5% 90%;
+    --ring: 38 52% 61%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
     /* Custom Brand Variables */
-    --gold: 41 54% 61%;
-    --dark: 0 0% 15%;
-    --snow: 0 0% 98%;
-    --graphite: 0 0% 60%;
-    --light-grey: 0 0% 93%;
+    --gold: 38 52% 61%;
+    --gold-soft: 38 52% 61%;
+    --slate: 228 4% 34%;
+    --slate-foreground: 0 0% 100%;
+    --dark: 228 4% 25%;
+    --snow: 240 6% 97%;
+    --graphite: 240 3% 52%;
+    --light-grey: 240 5% 94%;
+
+    --shadow-widget: 0 1px 2px hsl(228 4% 25% / 0.04), 0 8px 24px -12px hsl(228 4% 25% / 0.12);
   }
 }
+
 
 @layer base {
   * {

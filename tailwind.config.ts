@@ -51,16 +51,25 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         gold: "hsl(var(--gold))",
+        slate: {
+          DEFAULT: "hsl(var(--slate))",
+          foreground: "hsl(var(--slate-foreground))",
+        },
         dark: "hsl(var(--dark))",
         snow: "hsl(var(--snow))",
         graphite: "hsl(var(--graphite))",
-        raisin: "hsl(var(--raisin))",
+      },
+      boxShadow: {
+        widget: "var(--shadow-widget)",
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
+        "2xl": "1.25rem",
+        "3xl": "1.75rem",
       },
+
       keyframes: {
         "accordion-down": {
           from: {

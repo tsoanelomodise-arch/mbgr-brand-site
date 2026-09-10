@@ -27,31 +27,28 @@ export const Services = () => {
         }`}
       >
         <div className="max-w-6xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <div className="inline-block">
-              <div className="h-1 w-20 bg-primary mx-auto mb-4" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="space-y-3">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-primary">
               OUR <span className="text-primary">SERVICES</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl">
               Exceptional customer service throughout the replacement journey
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <Card 
                   key={index} 
-                  className="p-8 bg-card border-border hover:border-primary transition-all hover:-translate-y-2 group"
+                  className="p-8 md:p-10 bg-card rounded-2xl border-border/70 shadow-widget transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:border-primary/50 group"
                 >
                   <div className="space-y-6">
-                    <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Icon className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold text-foreground">{service.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold tracking-tight text-foreground">{service.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                   </div>
                 </Card>

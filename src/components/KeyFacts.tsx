@@ -42,32 +42,29 @@ export const KeyFacts = () => {
         }`}
       >
         <div className="max-w-6xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <div className="inline-block">
-              <div className="h-1 w-20 bg-primary mx-auto mb-4" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="space-y-3">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-primary">
               KEY <span className="text-primary">FACTS</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
               What makes My Brand Group stand out in the automotive industry
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {facts.map((fact, index) => {
               const Icon = fact.icon;
               return (
                 <Card 
                   key={index} 
-                  className="p-6 bg-card border-border hover:border-primary transition-all hover:-translate-y-1"
+                  className="p-8 bg-card rounded-2xl border-border/70 shadow-widget transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/50"
                 >
                   <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">{fact.title}</h3>
-                    <p className="text-muted-foreground">{fact.description}</p>
+                    <h3 className="text-lg md:text-xl font-bold tracking-tight text-foreground">{fact.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{fact.description}</p>
                   </div>
                 </Card>
               );

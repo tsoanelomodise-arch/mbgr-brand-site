@@ -34,19 +34,18 @@ export const Testimonials = () => {
   const { ref, isVisible } = useIntersectionObserver();
 
   return (
-    <section id="testimonials" className="py-12 md:py-24 px-4 bg-secondary/30">
+    <section id="testimonials" className="py-16 md:py-28 px-4 bg-slate text-slate-foreground">
       <div
         ref={ref}
         className={`max-w-7xl mx-auto transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <div className="text-center mb-14">
-          <div className="h-1 w-20 bg-primary mx-auto mb-4" />
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+        <div className="mb-12 md:mb-16 space-y-3">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-primary">
             WHAT OUR <span className="text-primary">CLIENTS</span> SAY
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-white/70 max-w-2xl">
             Real stories from policy holders who experienced our vehicle replacement service first-hand.
           </p>
         </div>
@@ -55,13 +54,13 @@ export const Testimonials = () => {
           {testimonials.map((t, i) => (
             <Card
               key={t.name}
-              className="p-8 hover:shadow-xl transition-all duration-300 border-border hover:border-primary relative overflow-hidden"
+              className="p-8 md:p-10 bg-card rounded-3xl border-transparent shadow-widget hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
               style={{ animationDelay: `${i * 150}ms` }}
             >
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/15" />
+              <Quote className="absolute top-6 right-6 w-9 h-9 text-primary/20" />
 
               <div className="flex flex-col items-center text-center gap-4">
-                <Avatar className="h-20 w-20 border-2 border-primary">
+                <Avatar className="h-20 w-20 ring-2 ring-primary ring-offset-2 ring-offset-card">
                   <AvatarImage src={t.avatar} alt={t.name} />
                   <AvatarFallback className="bg-primary text-primary-foreground text-lg font-bold">
                     {t.initials}
@@ -77,12 +76,12 @@ export const Testimonials = () => {
                   ))}
                 </div>
 
-                <p className="text-muted-foreground italic leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   "{t.quote}"
                 </p>
 
                 <div>
-                  <p className="font-semibold text-foreground">{t.name}</p>
+                  <p className="font-bold tracking-tight text-foreground">{t.name}</p>
                   <p className="text-sm text-muted-foreground">{t.role}</p>
                 </div>
               </div>

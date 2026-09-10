@@ -66,7 +66,7 @@ export const Brands = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${portraitDuoYellow})` }}
       />
-      <div className="absolute inset-0 bg-background/85" />
+      <div className="absolute inset-0 bg-background/95" />
       <div 
         ref={ref}
         className={`container mx-auto px-4 relative z-10 transition-all duration-1000 ${
@@ -74,19 +74,16 @@ export const Brands = () => {
         }`}
       >
         <div className="max-w-6xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <div className="inline-block">
-              <div className="h-1 w-20 bg-primary mx-auto mb-4" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="space-y-3">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-primary">
               PRODUCT <span className="text-primary">BRANDS</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl">
               A comprehensive selection of the world's leading automotive brands
             </p>
           </div>
 
-          <Card className="p-8 bg-card border-border">
+          <Card className="p-6 md:p-10 bg-card rounded-3xl border-border/70 shadow-widget">
             <Carousel
               opts={{
                 align: "start",
@@ -98,7 +95,7 @@ export const Brands = () => {
               <CarouselContent className="-ml-4">
                 {brands.map((brand, index) => (
                   <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                    <div className="flex items-center justify-center p-4 md:p-6 rounded-lg bg-white hover:bg-secondary/50 transition-all hover:scale-105 border border-border hover:border-primary group h-24 md:h-32">
+                    <div className="flex items-center justify-center p-4 md:p-6 rounded-2xl bg-card hover:bg-secondary/40 transition-all duration-300 hover:scale-[1.03] border border-border/70 hover:border-primary group h-24 md:h-32">
                       <img 
                         src={brand.logo} 
                         alt={`${brand.name} vehicle replacement brand`}
@@ -109,8 +106,8 @@ export const Brands = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-0" />
-              <CarouselNext className="right-0" />
+              <CarouselPrevious className="left-0 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground" />
+              <CarouselNext className="right-0 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground" />
             </Carousel>
           </Card>
         </div>
