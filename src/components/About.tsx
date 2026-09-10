@@ -66,13 +66,13 @@ export const About = () => {
             </h2>
             <div className="max-w-4xl mx-auto space-y-4 text-lg text-muted-foreground">
               <p>
-                My Brand Group (MBG Africa Holdings) is a specialized vehicle replacement company in the motor industry, providing fast, stress-free solutions for clients whose vehicles have been written off. We handle the entire process—from working with insurers to sourcing like-for-like replacements—ensuring client mobility with minimal disruption and maximum satisfaction.
+                My Brand Group (MBG Africa Holdings) is a specialized vehicle replacement company in the motor industry, providing fast, stress-free solutions for clients whose vehicles have been written off. We handle the entire process—from working with insurers to sourcing like-for-like replacements—ensuring minimal disruption and maximum satisfaction.
               </p>
               <p>
                 Our team is committed to delivering a smooth, hassle-free experience for every client.
               </p>
               <p>
-                By offering this service, MBG helps insurers retain customers, reduce costs such as courtesy car hire, and maintain existing finance agreements. Our efficient, customer-focused approach strengthens relationships between insurers and their clients.
+                By offering this service, MBG helps insurers retain customers, reduce costs such as courtesy car hire, and maintain existing finance agreements. Our efficient, customer-focused approach strengthens relationships between insurers and their clients. We take pride in keeping drivers on the road with as little inconvenience as possible.
               </p>
             </div>
           </div>
