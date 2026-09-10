@@ -10,7 +10,7 @@ import hero6 from "@/assets/AdobeStock_1579748279.jpeg.asset.json";
 import hero7 from "@/assets/AdobeStock_1579748297_Optimised.jpg.asset.json";
 import hero8 from "@/assets/AdobeStock_1618441962_Optimised.jpg.asset.json";
 import hero9 from "@/assets/AdobeStock_1628191496_Optimised.jpg.asset.json";
-import mbgLogoAsset from "@/assets/mbg-logo-hero.png.asset.json";
+import mbgLogoAsset from "@/assets/mbg-logo-hero-clear.png.asset.json";
 const mbgLogo = mbgLogoAsset.url;
 
 const heroImages = [
