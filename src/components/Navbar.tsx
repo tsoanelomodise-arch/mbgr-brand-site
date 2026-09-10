@@ -44,7 +44,13 @@ export const Navbar = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="hover:opacity-80 transition-opacity"
           >
-            <img src={mbgLogo} alt="MBG Logo" className="h-12" />
+            <img
+              src={mbgLogo}
+              alt="MBG Logo"
+              className={`h-12 transition-opacity duration-300 ${
+                isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
+            />
           </button>
 
           {/* Desktop Navigation */}
