@@ -39,13 +39,30 @@ export const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Fast shuffle on load, then stop on a random slide
   useEffect(() => {
+    const steps = heroImages.length * 2 + Math.floor(Math.random() * heroImages.length);
+    let count = 0;
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+      count += 1;
+      if (count >= steps) {
+        clearInterval(interval);
+        setIsShuffling(false);
+      }
+    }, 120);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (isShuffling) return;
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isShuffling]);
 
   const goToImage = (index: number) => {
     setCurrentImageIndex(index);
