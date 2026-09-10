@@ -154,11 +154,7 @@ export const Hero = () => {
             />
           </div>
           
-          <div
-            className={`space-y-4 md:space-y-6 transition-opacity duration-1000 ${
-              isShuffling ? "opacity-0" : "opacity-100"
-            }`}
-          >
+          <div className="space-y-4 md:space-y-6">
             <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-light tracking-tight leading-[1.1] drop-shadow-[0_2px_24px_rgba(0,0,0,0.65)]">
               Your partner in vehicle replacement services.
             </p>
