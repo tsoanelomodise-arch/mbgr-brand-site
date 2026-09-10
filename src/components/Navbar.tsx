@@ -9,9 +9,20 @@ import {
 } from "@/components/ui/dropdown-menu";
 import mbgLogo from "@/assets/mbg-logo-new.png";
 
+const SECTION_IDS = [
+  "about",
+  "key-facts",
+  "services",
+  "brands",
+  "territories",
+  "testimonials",
+  "contact",
+];
+
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,8 +32,28 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.25, 0.5, 1] }
+    );
+
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setActiveSection(id);
     setIsMobileMenuOpen(false);
   };
 
@@ -31,6 +62,29 @@ export const Navbar = () => {
     { label: "Testimonials", id: "testimonials" },
     { label: "Contact", id: "contact" },
   ];
+
+  const linkClass = (isActive: boolean) =>
+    `rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
+      isActive
+        ? "bg-primary text-primary-foreground"
+        : "text-foreground hover:bg-primary hover:text-primary-foreground"
+    }`;
+
+  const mobileLinkClass = (isActive: boolean) =>
+    `block rounded-full px-3 py-2 text-left font-medium transition-colors ${
+      isActive
+        ? "bg-primary text-primary-foreground"
+        : "text-foreground hover:bg-primary hover:text-primary-foreground"
+    }`;
+
+  const mobileSubClass = (isActive: boolean) =>
+    `block rounded-full px-3 py-1.5 text-left text-sm transition-colors ${
+      isActive ? "text-primary font-medium" : "text-muted-foreground hover:text-primary"
+    }`;
+
+  const aboutActive = activeSection === "about" || activeSection === "key-facts";
+  const servicesActive = activeSection === "services" || activeSection === "territories";
+
 
   return (
     <nav
@@ -62,7 +116,7 @@ export const Navbar = () => {
                   e.preventDefault();
                   scrollToSection("about");
                 }}
-                className="rounded-full px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className={linkClass(aboutActive)}
               >
                 About Us
               </a>
@@ -87,7 +141,7 @@ export const Navbar = () => {
                   e.preventDefault();
                   scrollToSection("services");
                 }}
-                className="rounded-full px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className={linkClass(servicesActive)}
               >
                 Services
               </a>
@@ -112,7 +166,7 @@ export const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="rounded-full px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className={linkClass(activeSection === link.id)}
               >
                 {link.label}
               </button>
@@ -140,14 +194,14 @@ export const Navbar = () => {
               <div className="space-y-2">
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="block rounded-full px-3 py-2 text-left font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                  className={mobileLinkClass(aboutActive)}
                 >
                   About Us
                 </button>
                 <div className="pl-4 space-y-2">
                   <button
                     onClick={() => scrollToSection("key-facts")}
-                    className="block rounded-full px-3 py-1.5 text-left text-sm text-muted-foreground transition-colors hover:text-primary"
+                    className={mobileSubClass(activeSection === "key-facts")}
                   >
                     Key Facts
                   </button>
@@ -156,20 +210,20 @@ export const Navbar = () => {
               <div className="space-y-2">
                 <button
                   onClick={() => scrollToSection("services")}
-                  className="block rounded-full px-3 py-2 text-left font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                  className={mobileLinkClass(servicesActive)}
                 >
                   Services
                 </button>
                 <div className="pl-4 space-y-2">
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="block rounded-full px-3 py-1.5 text-left text-sm text-muted-foreground transition-colors hover:text-primary"
+                    className={mobileSubClass(activeSection === "services")}
                   >
                     Our Services
                   </button>
                   <button
                     onClick={() => scrollToSection("territories")}
-                    className="block rounded-full px-3 py-1.5 text-left text-sm text-muted-foreground transition-colors hover:text-primary"
+                    className={mobileSubClass(activeSection === "territories")}
                   >
                     Territories
                   </button>
@@ -179,7 +233,7 @@ export const Navbar = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="block rounded-full px-3 py-2 text-left font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                  className={mobileLinkClass(activeSection === link.id)}
                 >
                   {link.label}
                 </button>
