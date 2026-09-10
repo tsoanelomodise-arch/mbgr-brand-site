@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { MapPin, Phone, FileText, Mail, Globe, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
-import portraitSunglassesRed from "@/assets/portrait-sunglasses-red.jpg";
+import contactBgAsset from "@/assets/AdobeStock_1618441962_Optimised.jpg.asset.json";
 
 export const Contact = () => {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
@@ -41,7 +41,7 @@ export const Contact = () => {
     <section id="contact" className="py-12 md:py-24 relative overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${portraitSunglassesRed})` }}
+        style={{ backgroundImage: `url(${contactBgAsset.url})` }}
       />
       <div className="absolute inset-0 bg-background/95" />
       <div 
