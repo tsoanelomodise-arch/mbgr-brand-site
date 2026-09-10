@@ -194,7 +194,7 @@ export const Navbar = () => {
               <div className="space-y-2">
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="block rounded-full px-3 py-2 text-left font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                  className={mobileLinkClass(aboutActive)}
                 >
                   About Us
                 </button>
