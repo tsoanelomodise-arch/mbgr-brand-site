@@ -6,13 +6,29 @@ import hero2 from "@/assets/AdobeStock_1942224915_Optimised.jpg.asset.json";
 import hero3 from "@/assets/AdobeStock_1771150921_Optimized.jpg.asset.json";
 import hero4 from "@/assets/AdobeStock_1628191511_Optimised.jpg.asset.json";
 import hero5 from "@/assets/AdobeStock_1618442063_Optimised.jpg.asset.json";
+import hero6 from "@/assets/AdobeStock_1579748279.jpeg.asset.json";
+import hero7 from "@/assets/AdobeStock_1579748297_Optimised.jpg.asset.json";
+import hero8 from "@/assets/AdobeStock_1618441962_Optimised.jpg.asset.json";
+import hero9 from "@/assets/AdobeStock_1628191496_Optimised.jpg.asset.json";
 import mbgLogo from "@/assets/mbg-logo-new.png";
 
-const heroImages = [hero1.url, hero2.url, hero3.url, hero4.url, hero5.url];
+const heroImages = [
+  hero1.url,
+  hero2.url,
+  hero3.url,
+  hero4.url,
+  hero5.url,
+  hero6.url,
+  hero7.url,
+  hero8.url,
+  hero9.url,
+];
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [scrollY, setScrollY] = useState(0);
+  const [isShuffling, setIsShuffling] = useState(true);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,13 +39,30 @@ export const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Fast shuffle on load, then stop on a random slide
   useEffect(() => {
+    const steps = heroImages.length * 2 + Math.floor(Math.random() * heroImages.length);
+    let count = 0;
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+      count += 1;
+      if (count >= steps) {
+        clearInterval(interval);
+        setIsShuffling(false);
+      }
+    }, 120);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (isShuffling) return;
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isShuffling]);
 
   const goToImage = (index: number) => {
     setCurrentImageIndex(index);
@@ -56,13 +89,13 @@ export const Hero = () => {
         {heroImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full bg-cover bg-center bg-no-repeat transition-opacity duration-2000 ${
+            className={`absolute inset-0 w-full bg-cover bg-center bg-no-repeat ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
             style={{
               backgroundImage: `url(${image})`,
               transform: `translateY(${parallaxOffset}px)`,
-              transition: "transform 0.1s ease-out",
+              transition: `transform 0.1s ease-out, opacity ${isShuffling ? "0.1s" : "2s"} ease-in-out`,
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
