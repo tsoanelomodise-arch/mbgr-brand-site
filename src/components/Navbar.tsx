@@ -233,7 +233,7 @@ export const Navbar = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="block rounded-full px-3 py-2 text-left font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                  className={mobileLinkClass(activeSection === link.id)}
                 >
                   {link.label}
                 </button>
