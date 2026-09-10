@@ -148,7 +148,12 @@ export const Navbar = () => {
                 </div>
               </div>
               <div className="space-y-2">
-                <div className="font-medium text-foreground">Services</div>
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className="font-medium text-foreground hover:text-primary transition-colors text-left block"
+                >
+                  Services
+                </button>
                 <div className="pl-4 space-y-2">
                   <button
                     onClick={() => scrollToSection("services")}
