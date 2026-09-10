@@ -32,8 +32,19 @@ export const Hero = () => {
 
 
   useEffect(() => {
+    // Skip parallax work on small screens / reduced-motion for smoother scrolling
+    const isSmall = window.matchMedia("(max-width: 767px)").matches;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (isSmall || reduced) return;
+
+    let ticking = false;
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+        ticking = false;
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
