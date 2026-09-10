@@ -3,32 +3,32 @@ import mbgLogo from "@/assets/mbg-logo-new.png";
 
 export const Footer = () => {
   return (
-    <footer className="py-8 md:py-12 bg-secondary border-t border-border">
+    <footer className="py-12 md:py-16 bg-slate text-slate-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Brand */}
             <div>
               <img src={mbgLogo} alt="MBG Logo" className="h-12 mb-4" />
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-white/70">
                 Specializing in the motor industry with exceptional customer service throughout the replacement journey.
               </p>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <h4 className="font-semibold mb-4 text-white">Quick Links</h4>
               <div className="space-y-2">
-                <a href="#about" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#about" className="block text-sm text-white/70 hover:text-primary transition-colors">
                   About Us
                 </a>
-                <a href="#services" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#services" className="block text-sm text-white/70 hover:text-primary transition-colors">
                   Services
                 </a>
-                <a href="#brands" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#brands" className="block text-sm text-white/70 hover:text-primary transition-colors">
                   Brands
                 </a>
-                <a href="#contact" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#contact" className="block text-sm text-white/70 hover:text-primary transition-colors">
                   Contact
                 </a>
               </div>
@@ -36,8 +36,8 @@ export const Footer = () => {
 
             {/* Contact & Social */}
             <div>
-              <h4 className="font-semibold mb-4">Connect With Us</h4>
-              <p className="text-sm text-muted-foreground mb-4">
+              <h4 className="font-semibold mb-4 text-white">Connect With Us</h4>
+              <p className="text-sm text-white/70 mb-4">
                 110 Conrad Drive, Craighall Park, JHB<br />
                 +27 (0) 11 896 0455<br />
                 info@mybrandgroup.co.za
@@ -47,7 +47,7 @@ export const Footer = () => {
                   href="https://facebook.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-background flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Facebook className="h-4 w-4" />
                 </a>
@@ -55,7 +55,7 @@ export const Footer = () => {
                   href="https://linkedin.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-background flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
@@ -63,7 +63,7 @@ export const Footer = () => {
                   href="https://twitter.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-background flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Twitter className="h-4 w-4" />
                 </a>
@@ -71,7 +71,7 @@ export const Footer = () => {
                   href="https://instagram.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-background flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Instagram className="h-4 w-4" />
                 </a>
@@ -80,11 +80,11 @@ export const Footer = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="pt-8 border-t border-border text-center">
-            <p className="text-sm text-muted-foreground">
+          <div className="pt-8 border-t border-white/15 text-center">
+            <p className="text-sm text-white/70">
               © {new Date().getFullYear()} My Brand Group. All rights reserved.
             </p>
-            <p className="text-xs text-muted-foreground mt-3">
+            <p className="text-xs text-white/60 mt-3">
               Powered by{" "}
               <a 
                 href="https://wonderlandstudio.co.za/" 
