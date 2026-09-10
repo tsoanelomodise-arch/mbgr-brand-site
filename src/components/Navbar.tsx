@@ -74,20 +74,34 @@ export const Navbar = () => {
                   </DropdownMenuContent>
               </DropdownMenu>
             </div>
-            <DropdownMenu>
-              <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1">
+            <div className="inline-flex items-center gap-1">
+              <a
+                href="#services"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("services");
+                }}
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
                 Services
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => scrollToSection("services")}>
-                  Our Services
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => scrollToSection("territories")}>
-                  Territories
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+              </a>
+              <DropdownMenu>
+                <DropdownMenuTrigger
+                  aria-label="Services menu"
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  <ChevronDown className="h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem onClick={() => scrollToSection("services")}>
+                    Our Services
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => scrollToSection("territories")}>
+                    Territories
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -134,7 +148,12 @@ export const Navbar = () => {
                 </div>
               </div>
               <div className="space-y-2">
-                <div className="font-medium text-foreground">Services</div>
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className="font-medium text-foreground hover:text-primary transition-colors text-left block"
+                >
+                  Services
+                </button>
                 <div className="pl-4 space-y-2">
                   <button
                     onClick={() => scrollToSection("services")}
