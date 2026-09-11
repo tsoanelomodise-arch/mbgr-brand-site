@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import {
   Form,
   FormControl,
@@ -40,15 +41,29 @@ export const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
+
+    const { error } = await supabase.from("contact_enquiries").insert({
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      message: data.message,
+    });
+
+    if (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Your message could not be sent. Please try again or email us directly.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
     toast({
       title: "Message Sent!",
       description: "Thank you for contacting us. We'll get back to you soon.",
     });
-    
+
     form.reset();
     setIsSubmitting(false);
   };
