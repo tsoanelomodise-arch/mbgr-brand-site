@@ -18,6 +18,7 @@ import {
 
 const contactFormSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
+  company: z.string().trim().max(120, "Company must be less than 120 characters").optional(),
   email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
   phone: z.string().trim().min(10, "Phone number must be at least 10 digits").max(20, "Phone number must be less than 20 characters"),
   message: z.string().trim().min(10, "Message must be at least 10 characters").max(1000, "Message must be less than 1000 characters"),
@@ -33,6 +34,7 @@ export const ContactForm = () => {
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
+      company: "",
       email: "",
       phone: "",
       message: "",
@@ -44,6 +46,7 @@ export const ContactForm = () => {
 
     const { error } = await supabase.from("contact_enquiries").insert({
       name: data.name,
+      company: data.company?.trim() || null,
       email: data.email,
       phone: data.phone,
       message: data.message,
@@ -79,6 +82,20 @@ export const ContactForm = () => {
               <FormLabel>Name *</FormLabel>
               <FormControl>
                 <Input placeholder="Your full name" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        
+        <FormField
+          control={form.control}
+          name="company"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Company</FormLabel>
+              <FormControl>
+                <Input placeholder="Your company name (optional)" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
