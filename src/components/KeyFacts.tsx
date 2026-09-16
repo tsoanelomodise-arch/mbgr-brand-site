@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Building2, Car, Handshake, Heart, Zap } from "lucide-react";
+import { Building2, Car, Heart, Zap } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 export const KeyFacts = () => {
