@@ -9,7 +9,6 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
-import portraitDuoYellow from "@/assets/portrait-duo-yellow.jpg";
 import toyotaLogo from "@/assets/brands/toyota.png";
 import volkswagenLogo from "@/assets/brands/volkswagen.png";
 import suzukiLogo from "@/assets/brands/suzuki.png";
@@ -62,11 +61,7 @@ export const Brands = () => {
 
   return (
     <section id="brands" className="py-12 md:py-24 relative overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${portraitDuoYellow})` }}
-      />
-      <div className="absolute inset-0 bg-background/95" />
+      <div className="absolute inset-0 bg-background" />
       <div 
         ref={ref}
         className={`container mx-auto px-4 relative z-10 transition-all duration-1000 ${

@@ -32,8 +32,8 @@ export const Contact = () => {
     {
       icon: Globe,
       label: "Website",
-      value: "www.mybrandgroup.com",
-      link: "http://www.mybrandgroup.com"
+      value: "www.mybrandgroup.co.za",
+      link: "http://www.mybrandgroup.co.za"
     }
   ];
 
@@ -105,29 +105,13 @@ export const Contact = () => {
                   >
                     <Facebook className="h-5 w-5" />
                   </a>
-                  <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
                     <Linkedin className="h-5 w-5" />
-                  </a>
-                  <a 
-                    href="https://twitter.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                  <a 
-                    href="https://instagram.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    <Instagram className="h-5 w-5" />
                   </a>
                 </div>
               </div>
