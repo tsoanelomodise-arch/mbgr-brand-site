@@ -22,17 +22,17 @@ export const About = () => {
 
   const industryCategories = [
     {
+      heading: "Industry Focus",
+      items: [
+        "Insurance industry"
+      ]
+    },
+    {
       heading: "Replacement Types",
       items: [
         "Passenger Vehicles (Sedan, Hatchback and SUV)",
         "Motorcycles (Motorbikes, Trailers)",
         "Commercial Vehicles (Trucks, AGRI and Yellow Machines)"
-      ]
-    },
-    {
-      heading: "Industry Focus",
-      items: [
-        "Insurance industry"
       ]
     }
   ];
@@ -41,7 +41,7 @@ export const About = () => {
     "Continuation of existing vehicle finance agreement",
     "Courtesy car hire",
     "Full franchise dealership after sales service support",
-    "Delivery Nationwide including Botswana"
+    "Delivery Nationwide including Botswana and Lesotho"
   ];
 
   return (
