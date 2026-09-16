@@ -9,7 +9,7 @@ export const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Brand */}
             <div>
-              <img src={mbgLogo} alt="My Brand Group logo" className="h-20 sm:h-24 md:h-28 w-auto mb-6" loading="lazy" decoding="async" />
+              <img src={mbgLogo} alt="My Brand Group logo" className="h-32 sm:h-40 md:h-48 w-auto mb-6" loading="lazy" decoding="async" />
               <p className="text-sm text-white/70 mb-4">
                 My Brand Group forms part of the Digicall group of companies. Digicall was founded in South Africa in 2003 and now operates in 3 continents.{" "}
                 <a
