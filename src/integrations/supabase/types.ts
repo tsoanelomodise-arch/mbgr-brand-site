@@ -16,6 +16,7 @@ export type Database = {
     Tables: {
       contact_enquiries: {
         Row: {
+          company: string | null
           created_at: string
           email: string
           id: string
@@ -24,6 +25,7 @@ export type Database = {
           phone: string
         }
         Insert: {
+          company?: string | null
           created_at?: string
           email: string
           id?: string
@@ -32,6 +34,7 @@ export type Database = {
           phone: string
         }
         Update: {
+          company?: string | null
           created_at?: string
           email?: string
           id?: string

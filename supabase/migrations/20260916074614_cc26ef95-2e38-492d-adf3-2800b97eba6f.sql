@@ -1,0 +1,1 @@
+ALTER TABLE public.contact_enquiries ADD COLUMN company TEXT;
