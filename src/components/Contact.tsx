@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { MapPin, Phone, FileText, Mail, Globe, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
+import { MapPin, Phone, FileText, Mail, Globe, Facebook, Linkedin } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import contactBgAsset from "@/assets/AdobeStock_1618441962_Optimised.jpg.asset.json";
