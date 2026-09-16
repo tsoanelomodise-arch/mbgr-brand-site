@@ -59,13 +59,16 @@ export const About = () => {
             </h2>
             <div className="max-w-4xl space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
               <p>
-                My Brand Group (MBG Africa Holdings) is a specialized vehicle replacement company in the motor industry, providing fast, stress-free solutions for clients whose vehicles have been written off. We handle the entire process—from working with insurers to sourcing like-for-like replacements—ensuring minimal disruption and maximum satisfaction.
+                My Brand Group (MBG Africa Holdings) is a specialised mobility-enabling company, purpose-built to keep people moving when their vehicles have been written off. We manage the entire journey, from close collaboration with insurance companies to delivering a seamless, integrated process with minimal disruption and maximum client satisfaction at every step.
               </p>
               <p>
-                Our team is committed to delivering a smooth, hassle-free experience for every client.
+                Our approach to mobility is more than getting a replacement vehicle. It's about restoring independence, continuity, and peace of mind when clients need it most. Our people are committed to delivering a human-centred, seamless experience, tailored to the needs of each person we serve.
               </p>
               <p>
-                By offering this service, MBG helps insurers retain customers, reduce costs such as courtesy car hire, and maintain existing finance agreements. Our efficient, customer-focused approach strengthens relationships between insurers and their clients. We take pride in keeping drivers on the road with as little inconvenience as possible.
+                By partnering with MBG, insurers retain and strengthen customer relationships, reduce costs, and preserve a service model built around efficiency, care, and consistency. Our client-focused approach reinforces trust between insurers and their customers at a critical moment in their journey.
+              </p>
+              <p>
+                We don't just replace vehicles we enable mobility. This is My Brand Group, a Digicall Group company.
               </p>
             </div>
           </div>
