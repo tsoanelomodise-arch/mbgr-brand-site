@@ -28,6 +28,12 @@ export const About = () => {
         "Motorcycles (Motorbikes, Trailers)",
         "Commercial Vehicles (Trucks, AGRI and Yellow Machines)"
       ]
+    },
+    {
+      heading: "Industry Focus",
+      items: [
+        "Insurance industry"
+      ]
     }
   ];
 
