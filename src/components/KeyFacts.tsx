@@ -42,7 +42,7 @@ export const KeyFacts = () => {
               KEY <span className="text-primary">FACTS</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
-              What makes My Brand Group stand out in the automotive industry
+              What makes My Brand Group stand out
             </p>
           </div>
 
