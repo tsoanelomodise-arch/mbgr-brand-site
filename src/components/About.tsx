@@ -22,15 +22,11 @@ export const About = () => {
 
   const industryCategories = [
     {
-      heading: "Industry Focus",
-      items: ["Insurance industry: Vehicle replacements on all write-off claims"]
-    },
-    {
       heading: "Replacement Types",
       items: [
-        "Passenger Vehicles (Sedan, Hatchback and SU)",
+        "Passenger Vehicles (Sedan, Hatchback and SUV)",
         "Motorcycles (Motorbikes, Trailers)",
-        "Commercial Vehicles (Trucks, Farming Mobiles, Yellow Machines)"
+        "Commercial Vehicles (Trucks, AGRI and Yellow Machines)"
       ]
     }
   ];
@@ -38,8 +34,8 @@ export const About = () => {
   const benefits = [
     "Continuation of existing vehicle finance agreement",
     "Courtesy car hire",
-    "Full franchise dealership after sales service",
-    "Delivery Nationwide"
+    "Full franchise dealership after sales service support",
+    "Delivery Nationwide including Botswana"
   ];
 
   return (

@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Building2, Car, Handshake, Heart, Zap } from "lucide-react";
+import { Building2, Car, Heart, Zap } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 export const KeyFacts = () => {
@@ -8,12 +8,12 @@ export const KeyFacts = () => {
     {
       icon: Building2,
       title: "Strategic Partnership",
-      description: "Partially owned by Digicall Solutions (at 26%)"
+      description: "A Digicall Group company."
     },
     {
       icon: Car,
       title: "10,000+ Vehicles",
-      description: "Offering a choice of over 10,000 automobiles"
+      description: "Offering a choice of over 10,000+ automobiles"
     },
     {
       icon: Heart,
@@ -24,11 +24,6 @@ export const KeyFacts = () => {
       icon: Zap,
       title: "Innovation First",
       description: "Going the extra mile with innovation at our core"
-    },
-    {
-      icon: Handshake,
-      title: "Agreements with current insurers",
-      description: "Established agreements in place with leading insurers"
     }
   ];
 
@@ -47,7 +42,7 @@ export const KeyFacts = () => {
               KEY <span className="text-primary">FACTS</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
-              What makes My Brand Group stand out in the automotive industry
+              What makes My Brand Group stand out
             </p>
           </div>
 

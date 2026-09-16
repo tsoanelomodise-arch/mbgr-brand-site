@@ -1,4 +1,4 @@
-import { Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Facebook, Linkedin } from "lucide-react";
 import mbgLogo from "@/assets/mbg-logo-new.png";
 
 export const Footer = () => {
@@ -77,22 +77,6 @@ export const Footer = () => {
                   className="w-11 h-11 sm:w-9 sm:h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Linkedin className="h-4 w-4" />
-                </a>
-                <a 
-                  href="https://twitter.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-11 h-11 sm:w-9 sm:h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  <Twitter className="h-4 w-4" />
-                </a>
-                <a 
-                  href="https://instagram.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-11 h-11 sm:w-9 sm:h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  <Instagram className="h-4 w-4" />
                 </a>
               </div>
             </div>
